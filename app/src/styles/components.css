@@ -1,0 +1,309 @@
+/* 
+  Sai Fabrics Group - Shared Components Stylesheet
+*/
+
+/* --- Navigation & Header CSS --- */
+.sf-header {
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.sf-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  position: relative;
+}
+
+.sf-logo {
+  font-family: var(--font-headings);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.sf-logo i {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
+.sf-nav-menu {
+  display: flex;
+  list-style: none;
+  gap: var(--space-md);
+  margin: 0;
+  padding: 0;
+}
+
+.sf-nav-link {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color);
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Nav Link Hover Micro-interaction: Left-to-Right line slide-in translating upwards */
+.sf-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sf-nav-link:hover {
+  color: var(--accent-color);
+}
+
+.sf-nav-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.sf-nav-link.active {
+  color: var(--accent-color);
+}
+
+.sf-nav-link.active::after {
+  transform: scaleX(1);
+  background-color: var(--secondary-accent);
+}
+
+/* Mobile Toggle Hamburger Button */
+.sf-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1100;
+}
+
+.sf-nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-color);
+  margin: 5px 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hamburger active transformation */
+.sf-nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.sf-nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.sf-nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .sf-nav-toggle {
+    display: block;
+  }
+  
+  .sf-nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: var(--bg-color);
+    border-left: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: var(--space-xl) var(--space-md) var(--space-md);
+    gap: var(--space-md);
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1050;
+  }
+  
+  .sf-nav-menu.open {
+    right: 0;
+  }
+  
+  .sf-nav-link {
+    font-size: 1.1rem;
+    display: block;
+  }
+}
+
+/* --- Shared Button Styles --- */
+.sf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: 0.75rem 1.5rem;
+  border: 1px solid var(--text-color);
+  border-radius: 0;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  background-color: transparent;
+  color: var(--text-color);
+}
+
+.sf-btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: #FFFFFF;
+}
+
+.sf-btn-primary:hover {
+  background-color: var(--text-color);
+  border-color: var(--text-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+.sf-btn-secondary {
+  border-color: var(--text-color);
+}
+
+.sf-btn-secondary:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+.sf-btn:active {
+  transform: scale(0.97);
+}
+
+/* --- Footer CSS (Placeholder Structure) --- */
+.sf-footer {
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  padding: var(--space-lg) 0 var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.sf-footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--grid-gap);
+  margin-bottom: var(--space-lg);
+}
+
+.sf-footer-brand p {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-top: var(--space-sm);
+  font-size: 0.9rem;
+  max-width: 320px;
+}
+
+.sf-footer-title {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+}
+
+.sf-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sf-footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.sf-footer-links a {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.sf-footer-links a:hover {
+  opacity: 1;
+  color: var(--accent-color);
+  padding-left: 4px;
+}
+
+.sf-footer-contact {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sf-footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  font-size: 0.9rem;
+  margin-bottom: var(--space-sm);
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.sf-footer-contact i {
+  color: var(--accent-color);
+  margin-top: 3px;
+}
+
+.sf-footer-socials {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.sf-footer-socials a {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.sf-footer-socials a:hover {
+  opacity: 1;
+  color: var(--accent-color);
+}
+
+.sf-footer-bottom {
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .sf-footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .sf-footer-bottom {
+    flex-direction: column;
+    gap: var(--space-xs);
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,134 @@
+/* 
+  Sai Fabrics Group - Core Design System & Stylesheet
+  Theme: Warm Tactile Editorial
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  /* Color System */
+  --bg-color: #FBF9F6;          /* Raw Canvas */
+  --text-color: #1A1D20;        /* Rich Ink */
+  --accent-color: #C85C43;      /* Terracotta Dye */
+  --secondary-accent: #6B7F72;  /* Sage Leaf */
+  --border-color: #E8E3DC;      /* Grid Weave */
+  --card-bg: #FFFFFF;
+  
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+  
+  /* Typography Scale */
+  --font-headings: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  
+  /* Grid & Alignment Constraints */
+  --container-max-width: 1200px;
+  --grid-gap: 1.5rem;
+}
+
+/* Global Reset & Base Layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-accent);
+}
+
+/* Grid & Structure Utilities */
+.sf-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
+}
+
+.sf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--grid-gap);
+}
+
+/* Baseline Typography Rules */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--text-color);
+  margin-bottom: var(--space-xs);
+}
+
+h1 { font-size: clamp(2.5rem, 6vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+h4 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: var(--space-sm);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-color);
+}
+
+/* Skeleton Loading Shimmer Utility */
+@keyframes sf-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.sf-skeleton {
+  background: linear-gradient(90deg, #EBE6DF 25%, #F5EFE6 50%, #EBE6DF 75%);
+  background-size: 200% 100%;
+  animation: sf-shimmer 1.8s infinite ease-in-out;
+  border-radius: 0;
+  display: inline-block;
+}
+
+.sf-skeleton-text {
+  height: 1.2rem;
+  margin-bottom: var(--space-xs);
+  width: 100%;
+}
+
+.sf-skeleton-image {
+  height: 250px;
+  width: 100%;
+  margin-bottom: var(--space-sm);
+}

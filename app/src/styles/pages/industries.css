@@ -1,0 +1,107 @@
+/* 
+  Sai Fabrics Group - Industries Scoped Stylesheet
+*/
+
+/* --- Industries Hero --- */
+.sf-industries-hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  background-image: 
+    linear-gradient(rgba(251, 249, 246, 0.95), rgba(251, 249, 246, 1)),
+    radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px;
+}
+
+.sf-industries-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sf-industries-intro h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.sf-industries-intro p {
+  font-size: 1.1rem;
+  color: var(--secondary-accent);
+  font-weight: 500;
+}
+
+/* --- Primary Industries Cards Grid --- */
+.sf-industries-list {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sf-industry-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sf-industry-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.sf-industry-header i {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+}
+
+.sf-industry-header h3 {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.sf-industry-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* --- Supported Apparel Segments Grid --- */
+.sf-segments {
+  padding: var(--space-xl) 0;
+  background-color: #FAF8F5;
+}
+
+.sf-segment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--grid-gap);
+  margin-top: var(--space-lg);
+}
+
+.sf-segment-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  padding: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sf-segment-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.sf-segment-card i {
+  font-size: 1.25rem;
+  color: var(--secondary-accent);
+}
+
+.sf-segment-card span {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-color);
+}

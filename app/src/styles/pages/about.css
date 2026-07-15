@@ -1,0 +1,215 @@
+/* 
+  Sai Fabrics Group - About Page Scoped Stylesheet
+*/
+
+/* --- About Hero & Intro --- */
+.sf-about-hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  background-image: 
+    linear-gradient(rgba(251, 249, 246, 0.95), rgba(251, 249, 246, 1)),
+    radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px;
+}
+
+.sf-about-intro {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sf-about-intro h1 {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.sf-intro-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+.sf-intro-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-sm);
+}
+
+/* Abstract frame graphic representing textile rolls */
+.sf-textile-frame {
+  width: 100%;
+  height: 300px;
+  border: 1px solid var(--border-color);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: var(--space-md);
+  background: var(--bg-color);
+}
+
+.sf-textile-bar {
+  height: 10px;
+  background-color: var(--border-color);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.sf-textile-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: var(--accent-color);
+  opacity: 0.3;
+}
+
+.sf-textile-bar:nth-child(2)::after {
+  width: 75%;
+  background-color: var(--secondary-accent);
+  left: 20%;
+}
+
+.sf-textile-bar:nth-child(3)::after {
+  width: 40%;
+  background-color: var(--text-color);
+  left: 40%;
+}
+
+@media (max-width: 768px) {
+  .sf-intro-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+/* --- Vision & Mission Side-by-Side --- */
+.sf-vision-mission {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sf-vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.sf-vm-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-vm-card i {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: var(--space-sm);
+}
+
+.sf-vm-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: var(--space-sm);
+}
+
+.sf-vm-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.9;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sf-vm-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+/* --- Core Values Grid --- */
+.sf-values {
+  padding: var(--space-xl) 0;
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sf-value-card i {
+  font-size: 1.75rem;
+  color: var(--secondary-accent);
+  margin-bottom: var(--space-xs);
+  display: inline-block;
+}
+
+.sf-value-card h3 {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.sf-value-card p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  opacity: 0.85;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* --- Purpose & Promises Section --- */
+.sf-purpose {
+  padding: var(--space-xl) 0;
+}
+
+.sf-purpose-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-lg);
+}
+
+.sf-purpose-text h2 {
+  margin-bottom: var(--space-sm);
+}
+
+.sf-purpose-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.sf-promise-card {
+  height: 100%;
+}
+
+.sf-promise-list {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-sm) 0 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+}
+
+.sf-promise-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.sf-promise-list i {
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .sf-purpose-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
