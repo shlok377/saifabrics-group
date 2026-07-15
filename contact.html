@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Sai Fabrics Group Surat</title>
+  <meta name="description" content="Contact Sai Fabrics Group in Surat, Gujarat. Submit your digital textile printing inquiries, upload designs, or estimate costs with our requirement builder.">
+  <link rel="stylesheet" href="src/styles/pages/contact.css">
+</head>
+<body>
+  
+  <!-- Header / Navigation -->
+  <header class="sf-header" id="sf-header">
+    <div class="sf-container">
+      <nav class="sf-navbar">
+        <a href="index.html" class="sf-logo">
+          <i class="bi bi-printer"></i>
+          SAI FABRICS
+        </a>
+        <ul class="sf-nav-menu" id="sf-nav-menu">
+          <li><a href="index.html" class="sf-nav-link">Home</a></li>
+          <li><a href="about.html" class="sf-nav-link">About Us</a></li>
+          <li><a href="solutions.html" class="sf-nav-link">Solutions</a></li>
+          <li><a href="infrastructure.html" class="sf-nav-link">Infrastructure</a></li>
+          <li><a href="industries.html" class="sf-nav-link">Industries</a></li>
+          <li><a href="blog.html" class="sf-nav-link">Blog</a></li>
+          <li><a href="contact.html" class="sf-nav-link active">Contact</a></li>
+        </ul>
+        <button class="sf-nav-toggle" id="sf-nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Contact Hero -->
+    <section class="sf-contact-hero">
+      <div class="sf-container">
+        <div class="sf-contact-intro">
+          <h1>Contact Sai Fabrics Group</h1>
+          <p>Get in touch with our textile printing experts to discuss your B2B requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact & Inquiry Section -->
+    <section class="sf-contact-section">
+      <div class="sf-container">
+        <div class="sf-contact-grid">
+          
+          <!-- Details Left -->
+          <div class="sf-contact-info-list">
+            <h2>Get in Touch</h2>
+            <p style="margin-bottom: var(--space-md);">Whether you want to develop samples, request bulk production, or coordinate design files, our team is here to support your manufacturing goals.</p>
+            
+            <!-- Address -->
+            <div class="sf-info-block">
+              <i class="bi bi-geo-alt"></i>
+              <div>
+                <h3>Registered Office</h3>
+                <p>Plot No. 142, Surat Textile Industrial Estate, Ring Road, Surat, Gujarat, 395002, India</p>
+              </div>
+            </div>
+            
+            <!-- Phone -->
+            <div class="sf-info-block">
+              <i class="bi bi-telephone"></i>
+              <div>
+                <h3>Phone & WhatsApp</h3>
+                <p>+91 261 400 9000</p>
+              </div>
+            </div>
+            
+            <!-- Email -->
+            <div class="sf-info-block">
+              <i class="bi bi-envelope"></i>
+              <div>
+                <h3>Email Support</h3>
+                <p>contact@saifabrics.com</p>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="sf-info-block">
+              <i class="bi bi-clock"></i>
+              <div>
+                <h3>Business Hours</h3>
+                <p>Monday to Saturday: 9:30 AM to 7:00 PM<br><span style="opacity: 0.6;">(Closed on Sundays and Public Holidays)</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inquiry Form Right -->
+          <div class="sf-card sf-contact-form-card">
+            <h2>Business Inquiry</h2>
+            <form id="inquiry-form" novalidate>
+              
+              <!-- Name -->
+              <div class="sf-form-group">
+                <label for="form-name">Full Name *</label>
+                <input type="text" id="form-name" class="sf-form-control" placeholder="Enter your name" required>
+              </div>
+
+              <!-- Company -->
+              <div class="sf-form-group">
+                <label for="form-company">Company Name *</label>
+                <input type="text" id="form-company" class="sf-form-control" placeholder="Enter your business name" required>
+              </div>
+
+              <!-- Email -->
+              <div class="sf-form-group">
+                <label for="form-email">Email Address *</label>
+                <input type="email" id="form-email" class="sf-form-control" placeholder="name@company.com" required>
+              </div>
+
+              <!-- Phone -->
+              <div class="sf-form-group">
+                <label for="form-phone">Phone Number *</label>
+                <input type="tel" id="form-phone" class="sf-form-control" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+
+              <!-- Message -->
+              <div class="sf-form-group">
+                <label for="form-message">Message / Specifications *</label>
+                <textarea id="form-message" class="sf-form-control" rows="4" placeholder="Detail your print requirements (quantity, fabric types, delivery)..." required></textarea>
+              </div>
+
+              <!-- Drag/Drop File Upload -->
+              <div class="sf-form-group">
+                <label>Design File Upload (Optional)</label>
+                <div class="sf-file-upload-zone" id="file-upload-zone">
+                  <i class="bi bi-cloud-arrow-up"></i>
+                  <p>Drag and drop your file here, or click to browse</p>
+                  <p class="file-formats">Supported formats: JPG, PNG, PDF, TIFF, AI (Max: 10MB)</p>
+                  <input type="file" id="form-file" accept=".jpg,.jpeg,.png,.pdf,.tiff,.ai">
+                </div>
+                
+                <!-- Dynamic feedback element -->
+                <div class="sf-file-info-bar" id="file-info-bar">
+                  <div>
+                    <i class="bi bi-file-earmark-check text-success"></i>
+                    <span id="file-display-name">filename.png</span>
+                    <span id="file-display-size" style="font-size: 0.75rem; opacity: 0.6; margin-left: 0.5rem;">(4.2 MB)</span>
+                  </div>
+                  <button type="button" id="file-remove-btn" aria-label="Remove file">&times;</button>
+                </div>
+              </div>
+
+              <!-- Submit -->
+              <button type="submit" class="sf-btn sf-btn-primary" style="width: 100%; border: none;">Submit Inquiry</button>
+
+              <!-- Data Security Disclosures -->
+              <div class="sf-disclosure-box">
+                <i class="bi bi-shield-lock-fill"></i>
+                <p><strong>Artwork Security Promise:</strong> Your print design files are stored on secure, encrypted storage servers and will only be accessed by authorized production engineers for sampling and manufacturing.</p>
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual Requirement Builder (Task 6.3) -->
+    <section class="sf-builder-section">
+      <div class="sf-container">
+        <div class="sf-builder-container">
+          <div class="sf-section-header">
+            <h2>Visual Requirement Builder</h2>
+            <p>Select your specifications to build a customized fabric printing estimate</p>
+          </div>
+
+          <div class="sf-builder-grid">
+            
+            <!-- Left inputs panel -->
+            <div class="sf-builder-column">
+              <!-- Fabric Selection -->
+              <div class="sf-form-group">
+                <label>1. Select Fabric Base</label>
+                <div class="sf-builder-btn-grid" id="builder-fabric-select">
+                  <button type="button" class="sf-builder-choice-btn active" data-value="cotton">Cotton</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="polyester">Polyester</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="viscose">Viscose</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="linen">Linen</button>
+                </div>
+              </div>
+
+              <!-- Quantity Selector slider -->
+              <div class="sf-form-group">
+                <label for="builder-qty">2. Quantity (Meters): <span id="builder-qty-val" style="color: var(--accent-color); font-weight: 800;">500m</span></label>
+                <input type="range" id="builder-qty" min="50" max="5000" step="50" value="500" style="width: 100%; accent-color: var(--accent-color);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">
+                  <span>50m (Min Order)</span>
+                  <span>5,000m+</span>
+                </div>
+              </div>
+
+              <!-- Print Mode Selection -->
+              <div class="sf-form-group">
+                <label>3. Select Execution Type</label>
+                <div class="sf-builder-btn-grid" id="builder-type-select">
+                  <button type="button" class="sf-builder-choice-btn active" data-value="sample">Sample Development</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="bulk">Bulk Production</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right estimates card panel -->
+            <div class="sf-builder-column">
+              <div class="sf-card sf-builder-summary-card">
+                <h2>Estimate Summary</h2>
+                <div style="margin-top: var(--space-xs);">
+                  <div class="sf-summary-line">
+                    <span>Fabric Type</span>
+                    <span id="summary-fabric">Cotton</span>
+                  </div>
+                  <div class="sf-summary-line">
+                    <span>Quantity</span>
+                    <span id="summary-qty">500 meters</span>
+                  </div>
+                  <div class="sf-summary-line">
+                    <span>Execution Type</span>
+                    <span id="summary-type">Sample Development</span>
+                  </div>
+                  <div class="sf-summary-line">
+                    <span>Lead Timeline</span>
+                    <span id="summary-timeline" style="color: var(--secondary-accent);">4-6 Business Days</span>
+                  </div>
+                  <div class="sf-summary-line sf-summary-total">
+                    <span>Estimated Cost</span>
+                    <span id="summary-cost" style="color: var(--accent-color); font-size: 1.4rem;">₹1,25,000</span>
+                  </div>
+                </div>
+                <button type="button" class="sf-btn sf-btn-outline" id="builder-apply-btn" style="margin-top: var(--space-md); text-align: center;">Apply to Form</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="sf-footer">
+    <div class="sf-container">
+      <div class="sf-footer-grid">
+        <div class="sf-footer-brand">
+          <a href="index.html" class="sf-logo">
+            <i class="bi bi-printer"></i>
+            SAI FABRICS
+          </a>
+          <p>Engineering Fabrics That Build Fashion Brands. Premium Digital Printing Solutions based in Surat.</p>
+        </div>
+        <div>
+          <h5 class="sf-footer-title">Quick Links</h5>
+          <ul class="sf-footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="infrastructure.html">Infrastructure</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="sf-footer-title">Our Solutions</h5>
+          <ul class="sf-footer-links">
+            <li><a href="solutions.html">Digital Textile Printing</a></li>
+            <li><a href="solutions.html">Custom Fabric Printing</a></li>
+            <li><a href="solutions.html">Sampling</a></li>
+            <li><a href="solutions.html">Bulk Manufacturing</a></li>
+            <li><a href="solutions.html">Colour Management</a></li>
+            <li><a href="solutions.html">Quality Assurance</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="sf-footer-title">Contact Us</h5>
+          <ul class="sf-footer-contact">
+            <li><i class="bi bi-geo-alt"></i> <span>Plot No. 142, Surat Textile Industrial Estate, Ring Road, Surat, Gujarat, 395002, India</span></li>
+            <li><i class="bi bi-telephone"></i> <span>+91 261 400 9000</span></li>
+            <li><i class="bi bi-envelope"></i> <span>contact@saifabrics.com</span></li>
+            <li><i class="bi bi-clock"></i> <span>Mon - Sat: 9:30 AM - 7:00 PM</span></li>
+          </ul>
+          <div class="sf-footer-socials">
+            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="sf-footer-bottom">
+        <p>&copy; 2026 Sai Fabrics Group. All Rights Reserved.</p>
+        <p>Precision Digital Textile Printing Solutions</p>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="src/main.js"></script>
+  <script type="module" src="src/modules/forms.js"></script>
+  <script type="module" src="src/modules/builder.js"></script>
+  <script type="module" src="src/modules/animations.js"></script>
+</body>
+</html>

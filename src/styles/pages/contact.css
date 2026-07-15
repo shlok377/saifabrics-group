@@ -1,0 +1,290 @@
+/* 
+  Sai Fabrics Group - Contact Page Scoped Stylesheet
+*/
+
+/* --- Contact Hero --- */
+.sf-contact-hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  background-image: 
+    linear-gradient(rgba(251, 249, 246, 0.95), rgba(251, 249, 246, 1)),
+    radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px;
+}
+
+.sf-contact-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sf-contact-intro h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.sf-contact-intro p {
+  font-size: 1.1rem;
+  color: var(--secondary-accent);
+  font-weight: 500;
+}
+
+/* --- Contact Page Columns --- */
+.sf-contact-section {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sf-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-lg);
+}
+
+/* Address & Info Details Left */
+.sf-contact-info-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.sf-info-block {
+  display: flex;
+  gap: var(--space-xs);
+  align-items: flex-start;
+}
+
+.sf-info-block i {
+  font-size: 1.75rem;
+  color: var(--accent-color);
+  margin-top: 0.1rem;
+}
+
+.sf-info-block h3 {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.sf-info-block p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Inquiry Form Right */
+.sf-contact-form-card {
+  padding: var(--space-md);
+}
+
+.sf-contact-form-card h2 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-sm);
+}
+
+.sf-form-group {
+  margin-bottom: var(--space-sm);
+}
+
+.sf-form-group label {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-color);
+}
+
+.sf-form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.sf-form-control:focus {
+  outline: none;
+  border-color: var(--text-color);
+  background-color: #FFFFFF;
+}
+
+/* File Upload Zone styling */
+.sf-file-upload-zone {
+  border: 2px dashed var(--border-color);
+  padding: var(--space-sm);
+  text-align: center;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sf-file-upload-zone:hover {
+  border-color: var(--accent-color);
+  background-color: #FFFFFF;
+}
+
+.sf-file-upload-zone i {
+  font-size: 1.8rem;
+  color: var(--secondary-accent);
+  margin-bottom: 0.25rem;
+  display: inline-block;
+}
+
+.sf-file-upload-zone p {
+  font-size: 0.85rem;
+  margin: 0 0 0.15rem;
+}
+
+.sf-file-upload-zone .file-formats {
+  font-size: 0.75rem;
+  color: var(--text-color);
+  opacity: 0.6;
+}
+
+.sf-file-upload-zone input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* File Name Status Alert */
+.sf-file-info-bar {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: rgba(107, 127, 114, 0.05); /* Sage leaf tint */
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.sf-file-info-bar span {
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.sf-file-info-bar button {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+/* Data Security Disclosures */
+.sf-disclosure-box {
+  margin-top: var(--space-sm);
+  display: flex;
+  gap: var(--space-xs);
+  align-items: flex-start;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  opacity: 0.75;
+}
+
+.sf-disclosure-box i {
+  color: var(--secondary-accent);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .sf-contact-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}
+
+/* --- Interactive Visual Requirement Builder (Task 6.3) --- */
+.sf-builder-section {
+  padding: var(--space-xl) 0;
+  background-color: #FAF8F5;
+}
+
+.sf-builder-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sf-builder-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.sf-builder-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.sf-builder-btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.sf-builder-choice-btn {
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  background-color: #FFFFFF;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sf-builder-choice-btn:hover, .sf-builder-choice-btn.active {
+  border-color: var(--text-color);
+  background-color: var(--text-color);
+  color: var(--bg-color);
+}
+
+.sf-builder-summary-card {
+  padding: var(--space-md);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.sf-summary-line span:last-child {
+  font-weight: 800;
+}
+
+.sf-summary-total {
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--border-color);
+  font-size: 1.15rem;
+}
+
+@media (max-width: 768px) {
+  .sf-builder-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+}

@@ -1,0 +1,214 @@
+/* 
+  Sai Fabrics Group - Solutions Page Scoped Stylesheet
+*/
+
+/* --- Solutions Hero --- */
+.sf-solutions-hero {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--border-color);
+  background-image: 
+    linear-gradient(rgba(251, 249, 246, 0.95), rgba(251, 249, 246, 1)),
+    radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px;
+}
+
+.sf-solutions-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sf-solutions-intro h1 {
+  margin-bottom: var(--space-xs);
+}
+
+.sf-solutions-intro .lead-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  margin-bottom: var(--space-sm);
+}
+
+.sf-solutions-intro p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* --- Core Services Grid --- */
+.sf-services {
+  padding: var(--space-xl) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sf-service-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sf-service-card i {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  margin-bottom: var(--space-xs);
+  display: inline-block;
+}
+
+.sf-service-card h3 {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.sf-service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Custom Pills for Ideal-For Category Lists */
+.sf-pill-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: var(--space-xs);
+}
+
+.sf-pill {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid var(--border-color);
+  background-color: rgba(107, 127, 114, 0.05); /* Muted Sage tint */
+  color: var(--secondary-accent);
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* --- Fabric Options Section & Visualizer Grid --- */
+.sf-fabrics {
+  padding: var(--space-xl) 0;
+  background-color: #FAF8F5;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sf-fabric-visualizer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+.sf-fabric-selector-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sf-fabric-btn {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sf-fabric-btn:hover, .sf-fabric-btn.active {
+  border-color: var(--text-color);
+  background-color: #FFFFFF;
+  padding-left: 1.5rem;
+}
+
+.sf-fabric-btn::after {
+  content: '\F138'; /* Bootstrap Icon Right Arrow */
+  font-family: 'bootstrap-icons';
+  font-size: 0.8rem;
+  color: var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.sf-fabric-btn:hover::after, .sf-fabric-btn.active::after {
+  color: var(--accent-color);
+  transform: translateX(4px);
+}
+
+/* Visualizer Preview Screen */
+.sf-fabric-preview-screen {
+  background-color: #FFFFFF;
+  border: 1px solid var(--border-color);
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-md);
+}
+
+/* Simulated fabric background weave */
+.sf-fabric-pattern-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(90deg, rgba(26, 29, 32, 0.3) 1px, transparent 1px),
+    linear-gradient(rgba(26, 29, 32, 0.3) 1px, transparent 1px);
+  background-size: 15px 15px;
+  z-index: 1;
+  opacity: 0.3;
+  
+  /* Mask coordinates tracing variables set by GSAP */
+  -webkit-mask-image: radial-gradient(circle 100px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 100%, rgba(0, 0, 0, 0.25) 100%);
+  mask-image: radial-gradient(circle 100px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 100%, rgba(0, 0, 0, 0.25) 100%);
+}
+
+/* Details Overlay */
+.sf-fabric-details-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  padding: var(--space-sm);
+  z-index: 5;
+  max-width: 400px;
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+}
+
+.sf-fabric-details-card h4 {
+  font-family: var(--font-headings);
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.sf-fabric-details-card p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .sf-fabric-visualizer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  .sf-fabric-preview-screen {
+    height: 300px;
+  }
+}
