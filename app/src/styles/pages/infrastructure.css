@@ -33,6 +33,7 @@
 }
 
 .sf-infra-card h3 {
+  margin-top: var(--space-xs);
   margin-bottom: var(--space-xs);
 }
 
@@ -151,6 +152,7 @@
   font-family: var(--font-body);
   font-size: 1.15rem;
   font-weight: 700;
+  margin-top: 0.25rem;
   margin-bottom: var(--space-xs);
   display: flex;
   align-items: center;

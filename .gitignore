@@ -25,3 +25,4 @@ Thumbs.db
 # Internal logs/state
 .think-live/
 .gemini/
+.firebase/

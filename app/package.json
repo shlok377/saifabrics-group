@@ -10,7 +10,9 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "gsap": "^3.12.5"
+    "gsap": "^3.12.5",
+    "multer": "^2.2.0",
+    "nodemailer": "^9.0.3"
   },
   "devDependencies": {
     "vite": "^5.2.11"

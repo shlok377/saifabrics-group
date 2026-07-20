@@ -1,0 +1,14 @@
+{
+  "recipientEmail": "contact@saifabrics.com",
+  "senderEmail": "contact@saifabrics.com",
+  "smtp": {
+    "service": "gmail",
+    "host": "smtp.gmail.com",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "your-email@gmail.com",
+      "pass": "YOUR_GMAIL_APP_PASSWORD"
+    }
+  }
+}

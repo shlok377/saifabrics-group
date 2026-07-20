@@ -41,23 +41,20 @@
       <div class="sf-container">
         <div class="sf-contact-intro">
           <h1>Contact Sai Fabrics Group</h1>
-          <p>Get in touch with our textile printing experts to discuss your B2B requirements.</p>
+          <p>Get in touch with our textile printing experts to discuss your B2B requirements. Whether you want to develop samples, request bulk production, or coordinate design files, our team is here to support your manufacturing goals.</p>
         </div>
       </div>
     </section>
 
-    <!-- Main Contact & Inquiry Section -->
+    <!-- Main Contact Section -->
     <section class="sf-contact-section">
       <div class="sf-container">
-        <div class="sf-contact-grid">
-          
-          <!-- Details Left -->
-          <div class="sf-contact-info-list">
-            <h2>Get in Touch</h2>
-            <p style="margin-bottom: var(--space-md);">Whether you want to develop samples, request bulk production, or coordinate design files, our team is here to support your manufacturing goals.</p>
-            
+        
+        <!-- Horizontal Contact Info Cards -->
+        <div class="sf-contact-horizontal-info">
+          <div class="sf-info-grid-row">
             <!-- Address -->
-            <div class="sf-info-block">
+            <div class="sf-card sf-info-card">
               <i class="bi bi-geo-alt"></i>
               <div>
                 <h3>Registered Office</h3>
@@ -66,7 +63,7 @@
             </div>
             
             <!-- Phone -->
-            <div class="sf-info-block">
+            <div class="sf-card sf-info-card">
               <i class="bi bi-telephone"></i>
               <div>
                 <h3>Phone & WhatsApp</h3>
@@ -75,7 +72,7 @@
             </div>
             
             <!-- Email -->
-            <div class="sf-info-block">
+            <div class="sf-card sf-info-card">
               <i class="bi bi-envelope"></i>
               <div>
                 <h3>Email Support</h3>
@@ -84,16 +81,83 @@
             </div>
 
             <!-- Hours -->
-            <div class="sf-info-block">
+            <div class="sf-card sf-info-card">
               <i class="bi bi-clock"></i>
               <div>
                 <h3>Business Hours</h3>
-                <p>Monday to Saturday: 9:30 AM to 7:00 PM<br><span style="opacity: 0.6;">(Closed on Sundays and Public Holidays)</span></p>
+                <p>Mon - Sat: 9:30 AM to 7:00 PM<br><span style="opacity: 0.6;">(Closed Sun & Holidays)</span></p>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Inquiry Form Right -->
+        <!-- Side-by-Side Builder (Left) & Inquiry Form (Right) -->
+        <div class="sf-contact-main-grid">
+          
+          <!-- Visual Requirement Builder (Left Column) -->
+          <div class="sf-card sf-builder-card">
+            <div class="sf-card-header-styled">
+              <h2>Visual Requirement Builder</h2>
+              <p>Configure your specifications to build a customized fabric requirement request</p>
+            </div>
+
+            <div class="sf-builder-controls">
+              <!-- Fabric Selection -->
+              <div class="sf-form-group">
+                <label>1. Select Fabric Base</label>
+                <div class="sf-builder-btn-grid" id="builder-fabric-select">
+                  <button type="button" class="sf-builder-choice-btn active" data-value="cotton">Cotton</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="polyester">Polyester</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="viscose">Viscose</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="linen">Linen</button>
+                </div>
+              </div>
+
+              <!-- Quantity Selector slider -->
+              <div class="sf-form-group">
+                <label for="builder-qty">2. Quantity (Meters): <span id="builder-qty-val" style="color: var(--accent-color); font-weight: 800;">500m</span></label>
+                <input type="range" id="builder-qty" min="50" max="5000" step="50" value="500" style="width: 100%; accent-color: var(--accent-color);">
+                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">
+                  <span>50m (Min Order)</span>
+                  <span>5,000m+</span>
+                </div>
+              </div>
+
+              <!-- Print Mode Selection -->
+              <div class="sf-form-group">
+                <label>3. Select Execution Type</label>
+                <div class="sf-builder-btn-grid" id="builder-type-select">
+                  <button type="button" class="sf-builder-choice-btn active" data-value="sample">Sample Development</button>
+                  <button type="button" class="sf-builder-choice-btn" data-value="bulk">Bulk Production</button>
+                </div>
+              </div>
+
+              <!-- Specification Summary Box -->
+              <div class="sf-builder-summary-box">
+                <h3 style="font-size: 1rem; margin-bottom: 0.5rem;">Specification Summary</h3>
+                <div class="sf-summary-line">
+                  <span>Fabric Type</span>
+                  <span id="summary-fabric">Cotton</span>
+                </div>
+                <div class="sf-summary-line">
+                  <span>Quantity</span>
+                  <span id="summary-qty">500 meters</span>
+                </div>
+                <div class="sf-summary-line">
+                  <span>Execution Type</span>
+                  <span id="summary-type">Sample Development</span>
+                </div>
+                <div class="sf-summary-line sf-summary-total">
+                  <span>Estimated Turnaround</span>
+                  <span id="summary-timeline" style="color: var(--accent-color); font-size: 1.1rem; font-weight: 800;">4-6 Business Days</span>
+                </div>
+                <button type="button" class="sf-btn sf-btn-secondary" id="builder-apply-btn" style="margin-top: var(--space-sm); width: 100%; text-align: center;">Apply Specifications to Form <i class="bi bi-arrow-right"></i></button>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Business Inquiry Form (Right Column) -->
           <div class="sf-card sf-contact-form-card">
             <h2>Business Inquiry</h2>
             <form id="inquiry-form" novalidate>
@@ -161,85 +225,6 @@
             </form>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- Visual Requirement Builder (Task 6.3) -->
-    <section class="sf-builder-section">
-      <div class="sf-container">
-        <div class="sf-builder-container">
-          <div class="sf-section-header">
-            <h2>Visual Requirement Builder</h2>
-            <p>Select your specifications to build a customized fabric printing estimate</p>
-          </div>
-
-          <div class="sf-builder-grid">
-            
-            <!-- Left inputs panel -->
-            <div class="sf-builder-column">
-              <!-- Fabric Selection -->
-              <div class="sf-form-group">
-                <label>1. Select Fabric Base</label>
-                <div class="sf-builder-btn-grid" id="builder-fabric-select">
-                  <button type="button" class="sf-builder-choice-btn active" data-value="cotton">Cotton</button>
-                  <button type="button" class="sf-builder-choice-btn" data-value="polyester">Polyester</button>
-                  <button type="button" class="sf-builder-choice-btn" data-value="viscose">Viscose</button>
-                  <button type="button" class="sf-builder-choice-btn" data-value="linen">Linen</button>
-                </div>
-              </div>
-
-              <!-- Quantity Selector slider -->
-              <div class="sf-form-group">
-                <label for="builder-qty">2. Quantity (Meters): <span id="builder-qty-val" style="color: var(--accent-color); font-weight: 800;">500m</span></label>
-                <input type="range" id="builder-qty" min="50" max="5000" step="50" value="500" style="width: 100%; accent-color: var(--accent-color);">
-                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">
-                  <span>50m (Min Order)</span>
-                  <span>5,000m+</span>
-                </div>
-              </div>
-
-              <!-- Print Mode Selection -->
-              <div class="sf-form-group">
-                <label>3. Select Execution Type</label>
-                <div class="sf-builder-btn-grid" id="builder-type-select">
-                  <button type="button" class="sf-builder-choice-btn active" data-value="sample">Sample Development</button>
-                  <button type="button" class="sf-builder-choice-btn" data-value="bulk">Bulk Production</button>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right estimates card panel -->
-            <div class="sf-builder-column">
-              <div class="sf-card sf-builder-summary-card">
-                <h2>Estimate Summary</h2>
-                <div style="margin-top: var(--space-xs);">
-                  <div class="sf-summary-line">
-                    <span>Fabric Type</span>
-                    <span id="summary-fabric">Cotton</span>
-                  </div>
-                  <div class="sf-summary-line">
-                    <span>Quantity</span>
-                    <span id="summary-qty">500 meters</span>
-                  </div>
-                  <div class="sf-summary-line">
-                    <span>Execution Type</span>
-                    <span id="summary-type">Sample Development</span>
-                  </div>
-                  <div class="sf-summary-line">
-                    <span>Lead Timeline</span>
-                    <span id="summary-timeline" style="color: var(--secondary-accent);">4-6 Business Days</span>
-                  </div>
-                  <div class="sf-summary-line sf-summary-total">
-                    <span>Estimated Cost</span>
-                    <span id="summary-cost" style="color: var(--accent-color); font-size: 1.4rem;">₹1,25,000</span>
-                  </div>
-                </div>
-                <button type="button" class="sf-btn sf-btn-outline" id="builder-apply-btn" style="margin-top: var(--space-md); text-align: center;">Apply to Form</button>
-              </div>
-            </div>
-
-          </div>
         </div>
       </div>
     </section>

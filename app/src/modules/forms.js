@@ -95,8 +95,8 @@ function initFormInteractivity() {
     infoBar.style.display = 'none';
   }
 
-  // --- Submission Verification ---
-  form.addEventListener('submit', (e) => {
+  // --- Submission Verification & Real Dispatch ---
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = document.getElementById('form-name').value.trim();
@@ -104,6 +104,7 @@ function initFormInteractivity() {
     const email = document.getElementById('form-email').value.trim();
     const phone = document.getElementById('form-phone').value.trim();
     const message = document.getElementById('form-message').value.trim();
+    const submitBtn = form.querySelector('button[type="submit"]');
 
     // Check presence
     if (!name || !company || !email || !phone || !message) {
@@ -125,9 +126,44 @@ function initFormInteractivity() {
       return;
     }
 
-    // Simulate success
-    alert(`Thank you, ${name}!\nYour inquiry for ${company} has been submitted.\n\nOur production team will review your specifications and contact you at ${email} shortly.`);
-    form.reset();
-    resetFileAttachment();
+    // Build Multipart FormData
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('company', company);
+    formData.append('email', email);
+    formData.append('phone', phone);
+    formData.append('message', message);
+
+    if (fileInput.files.length > 0) {
+      formData.append('artwork', fileInput.files[0]);
+    }
+
+    // Disable button & show spinner state
+    const originalBtnText = submitBtn.innerHTML;
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending Inquiry...';
+
+    try {
+      const response = await fetch('/api/send-inquiry', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert(`Thank you, ${name}!\n\nYour inquiry for "${company}" has been submitted successfully.\n\nA confirmation email has been dispatched to our production team at dalsaniashlok2007@gmail.com.`);
+        form.reset();
+        resetFileAttachment();
+      } else {
+        alert(`Submission Error: ${result.message || 'Unable to send email'}`);
+      }
+    } catch (err) {
+      console.error('Submission failed:', err);
+      alert('Network Error: Could not connect to inquiry server. Please check your network connection.');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+    }
   });
 }
