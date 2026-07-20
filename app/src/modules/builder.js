@@ -14,7 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
  * Updates specification summary and populates inquiry form
  */
 function initRequirementBuilder() {
-  const fabricBtns = document.querySelectorAll('#builder-fabric-select .sf-builder-choice-btn');
+  const pickerTrigger = document.getElementById('fabric-picker-trigger');
+  const swatchModal = document.getElementById('sf-swatch-modal');
+  const modalOverlay = document.getElementById('sf-swatch-modal-overlay');
+  const modalClose = document.getElementById('sf-modal-close');
+  const swatchCards = document.querySelectorAll('.sf-swatch-card');
+
+  const triggerThumb = document.getElementById('trigger-swatch-thumb');
+  const triggerName = document.getElementById('trigger-fabric-name');
+  const triggerSub = document.getElementById('trigger-fabric-subtext');
+
   const typeBtns = document.querySelectorAll('#builder-type-select .sf-builder-choice-btn');
   const qtyInput = document.getElementById('builder-qty');
   const qtyValDisplay = document.getElementById('builder-qty-val');
@@ -26,17 +35,45 @@ function initRequirementBuilder() {
   const summaryTimeline = document.getElementById('summary-timeline');
   const applyBtn = document.getElementById('builder-apply-btn');
 
-  let currentFabric = 'cotton';
+  let currentFabric = 'Cotton';
   let currentQty = 500;
   let currentType = 'sample';
 
-  // Track button switches
-  fabricBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      fabricBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      currentFabric = btn.getAttribute('data-value');
+  // Open Modal
+  if (pickerTrigger && swatchModal) {
+    pickerTrigger.addEventListener('click', () => {
+      swatchModal.classList.add('open');
+    });
+  }
+
+  // Close Modal
+  function closeModal() {
+    if (swatchModal) {
+      swatchModal.classList.remove('open');
+    }
+  }
+
+  if (modalOverlay) modalOverlay.addEventListener('click', closeModal);
+  if (modalClose) modalClose.addEventListener('click', closeModal);
+
+  // Swatch Card Selection
+  swatchCards.forEach(card => {
+    card.addEventListener('click', () => {
+      swatchCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      const val = card.getAttribute('data-value');
+      const color = card.getAttribute('data-color');
+      const sub = card.getAttribute('data-sub');
+
+      currentFabric = val;
+
+      if (triggerThumb) triggerThumb.style.backgroundColor = color;
+      if (triggerName) triggerName.innerText = val;
+      if (triggerSub) triggerSub.innerText = sub;
+
       updateSummary();
+      setTimeout(closeModal, 150);
     });
   });
 
@@ -49,10 +86,43 @@ function initRequirementBuilder() {
     });
   });
 
-  qtyInput.addEventListener('input', (e) => {
-    currentQty = parseInt(e.target.value);
-    qtyValDisplay.innerText = `${currentQty}m`;
+  const presetPills = document.querySelectorAll('.sf-preset-pill');
+
+  function updateSliderVisuals(val) {
+    currentQty = parseInt(val);
+    if (qtyInput) qtyInput.value = currentQty;
+    if (qtyValDisplay) qtyValDisplay.innerText = `${currentQty.toLocaleString()}m`;
+
+    // Calculate slider fill percentage for custom gradient track
+    if (qtyInput) {
+      const min = parseInt(qtyInput.min) || 50;
+      const max = parseInt(qtyInput.max) || 5000;
+      const pct = ((currentQty - min) / (max - min)) * 100;
+      qtyInput.style.background = `linear-gradient(to right, var(--accent-color) 0%, var(--accent-color) ${pct}%, #E8E3DC ${pct}%, #E8E3DC 100%)`;
+    }
+
+    // Sync Preset Pill Active state
+    presetPills.forEach(pill => {
+      const pQty = parseInt(pill.getAttribute('data-qty'));
+      pill.classList.toggle('active', pQty === currentQty);
+    });
+
     updateSummary();
+  }
+
+  if (qtyInput) {
+    qtyInput.addEventListener('input', (e) => {
+      updateSliderVisuals(e.target.value);
+    });
+    // Initial call to set gradient track
+    updateSliderVisuals(qtyInput.value);
+  }
+
+  presetPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const pQty = pill.getAttribute('data-qty');
+      updateSliderVisuals(pQty);
+    });
   });
 
   // Apply summary specifications to form message field
@@ -64,7 +134,7 @@ function initRequirementBuilder() {
     const typeLabel = currentType === 'sample' ? 'Sample Development' : 'Bulk Production';
     const timelineText = currentType === 'sample' ? '4-6 Business Days' : '10-15 Business Days';
     
-    messageField.value = `Hello, I would like to request a quote for:\n- Fabric Base: ${fabricName}\n- Target Quantity: ${currentQty} meters\n- Execution Mode: ${typeLabel}\n- Estimated Turnaround Target: ${timelineText}\n\nPlease contact me with official pricing and scheduling.`;
+    messageField.value = `Hello, I would like to request a quote for:\n- Fabric Base: ${fabricName}\n- Target Quantity: ${currentQty} meters\n- Execution Mode: ${typeLabel}\n- Estimated Time: ${timelineText}\n\nPlease contact me with official pricing and scheduling.`;
     
     // Smooth scroll up to B2B Form Card
     const targetElement = document.getElementById('form-message');

@@ -6,10 +6,6 @@
 .sf-solutions-hero {
   padding: var(--space-xl) 0 var(--space-lg);
   border-bottom: 1px solid var(--border-color);
-  background-image: 
-    linear-gradient(rgba(251, 249, 246, 0.95), rgba(251, 249, 246, 1)),
-    radial-gradient(var(--border-color) 1px, transparent 1px);
-  background-size: 100% 100%, 20px 20px;
 }
 
 .sf-solutions-intro {
@@ -102,6 +98,7 @@
   grid-template-columns: 1fr 2fr;
   gap: var(--space-lg);
   margin-top: var(--space-lg);
+  align-items: stretch;
 }
 
 .sf-fabric-selector-list {
@@ -146,36 +143,41 @@
   transform: translateX(4px);
 }
 
-/* Visualizer Preview Screen */
+/* Visualizer Preview Screen (100% Container Fill) */
 .sf-fabric-preview-screen {
   background-color: #FFFFFF;
   border: 1px solid var(--border-color);
-  height: 400px;
+  width: 100%;
+  height: 100%;
+  min-height: 520px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   padding: var(--space-md);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
-/* Simulated fabric background weave */
+/* 100% Canvas Weave Overlay */
 .sf-fabric-pattern-canvas {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
   height: 100%;
   background: 
     linear-gradient(90deg, rgba(26, 29, 32, 0.3) 1px, transparent 1px),
     linear-gradient(rgba(26, 29, 32, 0.3) 1px, transparent 1px);
-  background-size: 15px 15px;
+  background-size: 16px 16px;
   z-index: 1;
-  opacity: 0.3;
+  opacity: 0.35;
   
   /* Mask coordinates tracing variables set by GSAP */
-  -webkit-mask-image: radial-gradient(circle 100px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 100%, rgba(0, 0, 0, 0.25) 100%);
-  mask-image: radial-gradient(circle 100px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 100%, rgba(0, 0, 0, 0.25) 100%);
+  -webkit-mask-image: radial-gradient(circle 180px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 100%, rgba(0, 0, 0, 0.2) 100%);
+  mask-image: radial-gradient(circle 180px at var(--mouse-x, 50%) var(--mouse-y, 50%), black 100%, rgba(0, 0, 0, 0.2) 100%);
 }
 
 /* Details Overlay */

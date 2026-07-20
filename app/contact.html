@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Sai Fabrics Group Surat</title>
-  <meta name="description" content="Contact Sai Fabrics Group in Surat, Gujarat. Submit your digital textile printing inquiries, upload designs, or estimate costs with our requirement builder.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="src/styles/main.css">
+  <link rel="stylesheet" href="src/styles/components.css">
   <link rel="stylesheet" href="src/styles/pages/contact.css">
+  <script type="module" src="src/main.js"></script>
 </head>
 <body>
   
@@ -58,7 +62,7 @@
               <i class="bi bi-geo-alt"></i>
               <div>
                 <h3>Registered Office</h3>
-                <p>Plot No. 142, Surat Textile Industrial Estate, Ring Road, Surat, Gujarat, 395002, India</p>
+                <p>Plot No. 142, Surat Textile Industrial Estate, Ring Road, Surat, Gujarat 395002</p>
               </div>
             </div>
             
@@ -94,32 +98,53 @@
         <!-- Side-by-Side Builder (Left) & Inquiry Form (Right) -->
         <div class="sf-contact-main-grid">
           
-          <!-- Visual Requirement Builder (Left Column) -->
+          <!-- Configuration (Left Column) -->
           <div class="sf-card sf-builder-card">
             <div class="sf-card-header-styled">
-              <h2>Visual Requirement Builder</h2>
+              <h2>Configuration</h2>
               <p>Configure your specifications to build a customized fabric requirement request</p>
             </div>
 
             <div class="sf-builder-controls">
-              <!-- Fabric Selection -->
+              <!-- Fabric Selection Trigger -->
               <div class="sf-form-group">
                 <label>1. Select Fabric Base</label>
-                <div class="sf-builder-btn-grid" id="builder-fabric-select">
-                  <button type="button" class="sf-builder-choice-btn active" data-value="cotton">Cotton</button>
-                  <button type="button" class="sf-builder-choice-btn" data-value="polyester">Polyester</button>
-                  <button type="button" class="sf-builder-choice-btn" data-value="viscose">Viscose</button>
-                  <button type="button" class="sf-builder-choice-btn" data-value="linen">Linen</button>
-                </div>
+                <button type="button" class="sf-fabric-picker-trigger" id="fabric-picker-trigger">
+                  <div class="sf-picker-trigger-content">
+                    <div class="sf-swatch-thumb" id="trigger-swatch-thumb" style="background-color: #E1D7C6;"></div>
+                    <div>
+                      <span class="sf-picker-label" id="trigger-fabric-name">Cotton</span>
+                      <span class="sf-picker-subtext" id="trigger-fabric-subtext">Natural, Breathable Weave</span>
+                    </div>
+                  </div>
+                  <span class="sf-picker-action-badge">Browse Fabrics <i class="bi bi-grid-3x3-gap"></i></span>
+                </button>
               </div>
 
-              <!-- Quantity Selector slider -->
-              <div class="sf-form-group">
-                <label for="builder-qty">2. Quantity (Meters): <span id="builder-qty-val" style="color: var(--accent-color); font-weight: 800;">500m</span></label>
-                <input type="range" id="builder-qty" min="50" max="5000" step="50" value="500" style="width: 100%; accent-color: var(--accent-color);">
-                <div style="display: flex; justify-content: space-between; font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem;">
-                  <span>50m (Min Order)</span>
+              <!-- Stylized Quantity Selector & Presets -->
+              <div class="sf-form-group sf-range-group">
+                <div class="sf-range-header">
+                  <label for="builder-qty">2. Quantity (Meters)</label>
+                  <span id="builder-qty-val" class="sf-range-val-badge">500m</span>
+                </div>
+                
+                <div class="sf-range-slider-container">
+                  <input type="range" id="builder-qty" class="sf-custom-range" min="50" max="5000" step="50" value="500" aria-label="Select Meter Quantity">
+                </div>
+
+                <div class="sf-range-labels">
+                  <span>50m <small>(Min)</small></span>
+                  <span>2,500m</span>
                   <span>5,000m+</span>
+                </div>
+
+                <!-- Quick Quantity Preset Pills -->
+                <div class="sf-qty-presets" id="qty-presets">
+                  <button type="button" class="sf-preset-pill" data-qty="250">250m</button>
+                  <button type="button" class="sf-preset-pill active" data-qty="500">500m</button>
+                  <button type="button" class="sf-preset-pill" data-qty="1000">1,000m</button>
+                  <button type="button" class="sf-preset-pill" data-qty="2500">2,500m</button>
+                  <button type="button" class="sf-preset-pill" data-qty="5000">5,000m</button>
                 </div>
               </div>
 
@@ -148,7 +173,7 @@
                   <span id="summary-type">Sample Development</span>
                 </div>
                 <div class="sf-summary-line sf-summary-total">
-                  <span>Estimated Turnaround</span>
+                  <span>Estimated Time</span>
                   <span id="summary-timeline" style="color: var(--accent-color); font-size: 1.1rem; font-weight: 800;">4-6 Business Days</span>
                 </div>
                 <button type="button" class="sf-btn sf-btn-secondary" id="builder-apply-btn" style="margin-top: var(--space-sm); width: 100%; text-align: center;">Apply Specifications to Form <i class="bi bi-arrow-right"></i></button>
@@ -159,7 +184,7 @@
 
           <!-- Business Inquiry Form (Right Column) -->
           <div class="sf-card sf-contact-form-card">
-            <h2>Business Inquiry</h2>
+            <h2>Business Inquiry Form</h2>
             <form id="inquiry-form" novalidate>
               
               <!-- Name -->
@@ -216,15 +241,34 @@
               <!-- Submit -->
               <button type="submit" class="sf-btn sf-btn-primary" style="width: 100%; border: none;">Submit Inquiry</button>
 
-              <!-- Data Security Disclosures -->
-              <div class="sf-disclosure-box">
-                <i class="bi bi-shield-lock-fill"></i>
-                <p><strong>Artwork Security Promise:</strong> Your print design files are stored on secure, encrypted storage servers and will only be accessed by authorized production engineers for sampling and manufacturing.</p>
-              </div>
-
             </form>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- Dedicated Full-Width Google Maps Section (Sarvaswam Style) -->
+    <section class="sf-full-map-section">
+      <div class="sf-container">
+        <div class="sf-section-header" style="margin-bottom: var(--space-md);">
+          <h2>Our Factory & Office Location</h2>
+          <p>Surat Textile Industrial Estate, Ring Road, Surat, Gujarat 395002</p>
+        </div>
+        <div class="sf-card sf-full-map-card">
+          <iframe 
+            title="Sai Fabrics Group Factory Location"
+            src="https://maps.google.com/maps?q=Surat%20Textile%20Industrial%20Estate,%20Ring%20Road,%20Surat,%20Gujarat%20395002&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+          <a href="https://maps.google.com/?q=Surat+Textile+Industrial+Estate+Ring+Road+Surat+Gujarat+395002" target="_blank" rel="noopener noreferrer" class="sf-map-badge">
+            <i class="bi bi-geo-alt-fill"></i> Open in Google Maps <i class="bi bi-box-arrow-up-right"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -287,7 +331,122 @@
     </div>
   </footer>
 
-  <script type="module" src="src/main.js"></script>
+  <!-- Interactive Swatch Modal Popup (Top-Level Web Page Overlay) -->
+  <div class="sf-swatch-modal" id="sf-swatch-modal" aria-hidden="true">
+    <div class="sf-swatch-modal-overlay" id="sf-swatch-modal-overlay"></div>
+    <div class="sf-swatch-modal-content">
+      <div class="sf-swatch-modal-header">
+        <div>
+          <h3>Select Fabric Base</h3>
+          <p>Choose from our 11 commercial print-ready fabric substrates</p>
+        </div>
+        <button type="button" class="sf-modal-close" id="sf-modal-close" aria-label="Close fabric picker">&times;</button>
+      </div>
+      
+      <div class="sf-swatch-grid">
+        <!-- 1. Cotton -->
+        <div class="sf-swatch-card active" data-value="Cotton" data-color="#E1D7C6" data-sub="Natural, Breathable Weave">
+          <div class="sf-swatch-img" style="background-color: #E1D7C6;"></div>
+          <div class="sf-swatch-info">
+            <h4>Cotton</h4>
+            <p>Natural, Breathable Weave</p>
+          </div>
+        </div>
+
+        <!-- 2. Polyester -->
+        <div class="sf-swatch-card" data-value="Polyester" data-color="#D5C5C5" data-sub="High Durability & Sublimation">
+          <div class="sf-swatch-img" style="background-color: #D5C5C5;"></div>
+          <div class="sf-swatch-info">
+            <h4>Polyester</h4>
+            <p>High Durability & Sublimation</p>
+          </div>
+        </div>
+
+        <!-- 3. Rayon -->
+        <div class="sf-swatch-card" data-value="Rayon" data-color="#C5D2D5" data-sub="Soft, Silky Cellulose Drape">
+          <div class="sf-swatch-img" style="background-color: #C5D2D5;"></div>
+          <div class="sf-swatch-info">
+            <h4>Rayon</h4>
+            <p>Soft, Silky Cellulose Drape</p>
+          </div>
+        </div>
+
+        <!-- 4. Viscose -->
+        <div class="sf-swatch-card" data-value="Viscose" data-color="#CFD5C5" data-sub="Luxurious Semi-Synthetic Feel">
+          <div class="sf-swatch-img" style="background-color: #CFD5C5;"></div>
+          <div class="sf-swatch-info">
+            <h4>Viscose</h4>
+            <p>Luxurious Semi-Synthetic Feel</p>
+          </div>
+        </div>
+
+        <!-- 5. Linen -->
+        <div class="sf-swatch-card" data-value="Linen" data-color="#D9CCB9" data-sub="Classic Textured Flax Weave">
+          <div class="sf-swatch-img" style="background-color: #D9CCB9;"></div>
+          <div class="sf-swatch-info">
+            <h4>Linen</h4>
+            <p>Classic Textured Flax Weave</p>
+          </div>
+        </div>
+
+        <!-- 6. Silk Blends -->
+        <div class="sf-swatch-card" data-value="Silk Blends" data-color="#ECCFCF" data-sub="Premium Natural Luxury">
+          <div class="sf-swatch-img" style="background-color: #ECCFCF;"></div>
+          <div class="sf-swatch-info">
+            <h4>Silk Blends</h4>
+            <p>Premium Natural Luxury</p>
+          </div>
+        </div>
+
+        <!-- 7. Satin -->
+        <div class="sf-swatch-card" data-value="Satin" data-color="#EAE3CD" data-sub="Glossy High-Contrast Surface">
+          <div class="sf-swatch-img" style="background-color: #EAE3CD;"></div>
+          <div class="sf-swatch-info">
+            <h4>Satin</h4>
+            <p>Glossy High-Contrast Surface</p>
+          </div>
+        </div>
+
+        <!-- 8. Crepe -->
+        <div class="sf-swatch-card" data-value="Crepe" data-color="#D7CDD2" data-sub="Textured Wrinkle-Resistant Weave">
+          <div class="sf-swatch-img" style="background-color: #D7CDD2;"></div>
+          <div class="sf-swatch-info">
+            <h4>Crepe</h4>
+            <p>Textured Wrinkle-Resistant Weave</p>
+          </div>
+        </div>
+
+        <!-- 9. Chiffon -->
+        <div class="sf-swatch-card" data-value="Chiffon" data-color="#E2D4E4" data-sub="Sheer Lightweight Mesh">
+          <div class="sf-swatch-img" style="background-color: #E2D4E4;"></div>
+          <div class="sf-swatch-info">
+            <h4>Chiffon</h4>
+            <p>Sheer Lightweight Mesh</p>
+          </div>
+        </div>
+
+        <!-- 10. Georgette -->
+        <div class="sf-swatch-card" data-value="Georgette" data-color="#D4E4DB" data-sub="Crinkly Semi-Sheer Ethnic Weave">
+          <div class="sf-swatch-img" style="background-color: #D4E4DB;"></div>
+          <div class="sf-swatch-info">
+            <h4>Georgette</h4>
+            <p>Crinkly Semi-Sheer Ethnic Weave</p>
+          </div>
+        </div>
+
+        <!-- 11. Modal / Lycra Blends -->
+        <div class="sf-swatch-card" data-value="Modal / Lycra Blends" data-color="#D8DEC8" data-sub="Stretch Fashion Weave">
+          <div class="sf-swatch-img" style="background-color: #D8DEC8;"></div>
+          <div class="sf-swatch-info">
+            <h4>Modal / Lycra Blends</h4>
+            <p>Stretch Fashion Weave</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
   <script type="module" src="src/modules/forms.js"></script>
   <script type="module" src="src/modules/builder.js"></script>
   <script type="module" src="src/modules/animations.js"></script>

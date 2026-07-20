@@ -6,10 +6,6 @@
 .sf-infra-hero {
   padding: var(--space-xl) 0 var(--space-lg);
   border-bottom: 1px solid var(--border-color);
-  background-image: 
-    linear-gradient(rgba(251, 249, 246, 0.95), rgba(251, 249, 246, 1)),
-    radial-gradient(var(--border-color) 1px, transparent 1px);
-  background-size: 100% 100%, 20px 20px;
 }
 
 .sf-infra-intro {
