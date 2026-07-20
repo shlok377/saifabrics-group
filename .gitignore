@@ -22,6 +22,10 @@ app/dist/
 .DS_Store
 Thumbs.db
 
+# Sensitive config
+email.json
+app/email.json
+
 # Internal logs/state
 .think-live/
 .gemini/
