@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fabric Portfolio & Interactive Visualizer | Sai Fabrics Group Surat</title>
+  <meta name="description" content="Explore Sai Fabrics Group interactive fabric previewer & printing catalog. Test textures on Polyester, Cotton, Rayon, Viscose, Linen, Silk Blends, Satin, Crepe, Chiffon, Georgette, Knitted & Woven fabrics.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/img/horizontal_logo.png" alt="Sai Fabrics Group Logo" class="brand-logo-img">
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="infrastructure.html" class="nav-link">Infrastructure</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="enquiry.html" class="nav-link">Enquiries & Quotes</a></li>
+        </ul>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <!-- PORTFOLIO HERO BANNER -->
+  <section class="section-padding" style="padding-top: 130px; background: linear-gradient(180deg, rgba(34, 24, 41, 0.95) 0%, rgba(24, 17, 29, 1) 100%); border-bottom: 1px solid var(--border-plum);">
+    <div class="container" style="text-align: center;">
+      <span class="badge-gold" style="margin-bottom: 1rem;"><i class="fa-solid fa-swatchbook"></i> Master Fabric Archive & Studio</span>
+      <h1 style="margin-bottom: 1rem;">Fabric Portfolio & <span class="gold">Interactive Visualizer</span></h1>
+      <p style="max-width: 780px; margin: 0 auto 2.5rem auto; font-size: 1.1rem;">Select any of our 12 specialized fabric bases from the sidebar to inspect texture and visual appearance live in our studio visualizer.</p>
+
+      <div style="max-width: 520px; margin: 0 auto;">
+        <input type="text" class="search-input" id="portfolioSearch" placeholder="Search archive (e.g. Viscose, Foil, Silk, Pleated)..." style="width: 100%;">
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIAL FEATURE: STREAMLINED INTERACTIVE FABRIC PREVIEWER (12 FABRIC CATEGORIES) -->
+  <section class="section-padding" style="padding-bottom: 4rem;">
+    <div class="container">
+      
+      <div class="section-header" style="margin-bottom: 2.5rem;">
+        <div>
+          <span class="heading-tag">// INTERACTIVE DIGITAL STUDIO</span>
+          <h2>Live Fabric Texture & Visual Previewer</h2>
+        </div>
+      </div>
+
+      <div class="fabric-previewer-wrap sf-card">
+        <div class="previewer-grid">
+          
+          <!-- SIDEBAR FABRIC SELECTOR LIST (EXACT 12 CATEGORIES) -->
+          <div class="previewer-sidebar">
+            <button class="preview-fabric-btn active" data-fabric="polyester">
+              <span><i class="fa-solid fa-shirt" style="color: var(--gold-imperial); margin-right: 0.5rem;"></i> Polyester</span>
+              <span class="swatch-dot" style="background: #D5C5C5;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="cotton">
+              <span><i class="fa-solid fa-leaf" style="color: var(--gold-warm); margin-right: 0.5rem;"></i> Cotton</span>
+              <span class="swatch-dot" style="background: #E1D7C6;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="rayon">
+              <span><i class="fa-solid fa-scroll" style="color: var(--gold-imperial); margin-right: 0.5rem;"></i> Rayon</span>
+              <span class="swatch-dot" style="background: #C5D2D5;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="viscose">
+              <span><i class="fa-solid fa-layer-group" style="color: var(--gold-warm); margin-right: 0.5rem;"></i> Viscose</span>
+              <span class="swatch-dot" style="background: #CFD5C5;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="linen">
+              <span><i class="fa-solid fa-feather" style="color: var(--gold-imperial); margin-right: 0.5rem;"></i> Linen</span>
+              <span class="swatch-dot" style="background: #D9CCB9;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="silk">
+              <span><i class="fa-solid fa-gem" style="color: var(--gold-warm); margin-right: 0.5rem;"></i> Silk Blends</span>
+              <span class="swatch-dot" style="background: #ECCFCF;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="satin">
+              <span><i class="fa-solid fa-sun" style="color: var(--gold-imperial); margin-right: 0.5rem;"></i> Satin</span>
+              <span class="swatch-dot" style="background: #EAE3CD;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="crepe">
+              <span><i class="fa-solid fa-ribbon" style="color: var(--gold-warm); margin-right: 0.5rem;"></i> Crepe</span>
+              <span class="swatch-dot" style="background: #D7CDD2;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="chiffon">
+              <span><i class="fa-solid fa-wind" style="color: var(--gold-imperial); margin-right: 0.5rem;"></i> Chiffon</span>
+              <span class="swatch-dot" style="background: #E2D4E4;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="georgette">
+              <span><i class="fa-solid fa-fan" style="color: var(--gold-warm); margin-right: 0.5rem;"></i> Georgette</span>
+              <span class="swatch-dot" style="background: #D4E4DB;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="knitted">
+              <span><i class="fa-solid fa-border-all" style="color: var(--gold-imperial); margin-right: 0.5rem;"></i> Knitted Fabrics</span>
+              <span class="swatch-dot" style="background: #C8D6E5;"></span>
+            </button>
+
+            <button class="preview-fabric-btn" data-fabric="woven">
+              <span><i class="fa-solid fa-grip" style="color: var(--gold-warm); margin-right: 0.5rem;"></i> Woven Fabrics</span>
+              <span class="swatch-dot" style="background: #D0D0D0;"></span>
+            </button>
+          </div>
+
+          <!-- MAIN VISUALIZER STAGE -->
+          <div class="previewer-stage">
+            
+            <div class="previewer-screen" id="previewerScreen" style="background-image: url('assets/img/textile_printing_hero.jpg');">
+              <div class="previewer-glow-overlay"></div>
+
+              <div class="previewer-info-overlay">
+                <div>
+                  <h3 class="previewer-title" id="previewerTitle">Polyester Fabric</h3>
+                  <p class="previewer-desc" id="previewerDesc">Highly durable synthetic fiber with excellent color vibrancy. Ideal for activewear, sportswear, and vibrant sub-limation print outputs.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DIGITAL PRINTING TECHNOLOGY & QUALITY CONTROL PROCESS SECTION -->
+  <section class="section-padding" style="background-color: var(--bg-midnight); border-top: 1px solid var(--border-plum); padding-top: 4rem; padding-bottom: 4rem;">
+    <div class="container">
+      
+      <div class="grid-2" style="align-items: stretch; gap: 3rem;">
+        
+        <!-- Technology Capabilities Card -->
+        <div class="sf-card" style="display: flex; flex-direction: column; justify-content: space-between;">
+          <div>
+            <span class="heading-tag">// PRINTING MASTERY</span>
+            <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">State-of-the-Art Digital Printing Technology</h2>
+            <p style="margin-bottom: 1.5rem; font-size: 0.98rem; color: var(--text-muted);">We utilise advanced digital textile printing systems capable of producing:</p>
+            
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.85rem;">
+              <li style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--text-ivory);"><i class="fa-solid fa-circle-dot" style="color: var(--gold-imperial); font-size: 0.75rem;"></i> High-definition prints</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--text-ivory);"><i class="fa-solid fa-circle-dot" style="color: var(--gold-imperial); font-size: 0.75rem;"></i> Vibrant colour reproduction</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--text-ivory);"><i class="fa-solid fa-circle-dot" style="color: var(--gold-imperial); font-size: 0.75rem;"></i> Intricate design detailing</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--text-ivory);"><i class="fa-solid fa-circle-dot" style="color: var(--gold-imperial); font-size: 0.75rem;"></i> Smooth gradients</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--text-ivory);"><i class="fa-solid fa-circle-dot" style="color: var(--gold-imperial); font-size: 0.75rem;"></i> Consistent repeat patterns</li>
+              <li style="display: flex; align-items: center; gap: 0.8rem; font-size: 0.95rem; color: var(--text-ivory);"><i class="fa-solid fa-circle-dot" style="color: var(--gold-imperial); font-size: 0.75rem;"></i> Commercial-scale production quality</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Quality Control Process Card -->
+        <div class="sf-card" style="display: flex; flex-direction: column; justify-content: space-between; border-color: var(--gold-imperial); background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(212, 163, 79, 0.05) 100%);">
+          <div>
+            <span class="heading-tag">// ZERO-DEFECT ASSURANCE</span>
+            <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">Quality Control Process</h2>
+            <p style="margin-bottom: 1.5rem; font-size: 0.98rem; color: var(--text-muted);">Every production batch follows a structured quality assurance process. Our inspections include:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;">
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-ivory); background: var(--bg-midnight); padding: 0.65rem 0.9rem; border: 1px solid var(--border-plum);"><i class="fa-solid fa-check" style="color: var(--gold-imperial);"></i> Artwork Verification</div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-ivory); background: var(--bg-midnight); padding: 0.65rem 0.9rem; border: 1px solid var(--border-plum);"><i class="fa-solid fa-check" style="color: var(--gold-imperial);"></i> Colour Matching</div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-ivory); background: var(--bg-midnight); padding: 0.65rem 0.9rem; border: 1px solid var(--border-plum);"><i class="fa-solid fa-check" style="color: var(--gold-imperial);"></i> Print Alignment</div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-ivory); background: var(--bg-midnight); padding: 0.65rem 0.9rem; border: 1px solid var(--border-plum);"><i class="fa-solid fa-check" style="color: var(--gold-imperial);"></i> Fabric Inspection</div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-ivory); background: var(--bg-midnight); padding: 0.65rem 0.9rem; border: 1px solid var(--border-plum);"><i class="fa-solid fa-check" style="color: var(--gold-imperial);"></i> Surface Finish Evaluation</div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-ivory); background: var(--bg-midnight); padding: 0.65rem 0.9rem; border: 1px solid var(--border-plum);"><i class="fa-solid fa-check" style="color: var(--gold-imperial);"></i> Final Quality Check</div>
+              <div style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.9rem; color: var(--text-ivory); background: var(--bg-midnight); padding: 0.65rem 0.9rem; border: 1px solid var(--border-plum); grid-column: span 2;"><i class="fa-solid fa-check" style="color: var(--gold-imperial);"></i> Packaging Inspection</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE SUPPORT SECTION (REPLACES OLD GALLERY SECTION) -->
+  <section class="section-padding" style="padding-top: 5rem; padding-bottom: 6rem; background-color: var(--bg-midnight); border-top: 1px solid var(--border-plum);">
+    <div class="container">
+      
+      <div class="section-header" style="margin-bottom: 3.5rem;">
+        <div style="max-width: 750px;">
+          <span class="heading-tag">// SECTORIAL CAPABILITIES</span>
+          <h2>Industries We Support</h2>
+          <p style="font-size: 1.05rem; color: var(--text-muted); margin-top: 0.5rem; margin-bottom: 0;">Providing custom digital printing solutions tailored for fashion houses, garment exporters, commercial apparel manufacturers, and private labels.</p>
+        </div>
+      </div>
+
+      <div class="grid-4" style="gap: 1.8rem;">
+        
+        <!-- 1. Women's Fashion -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-person-dress"></i></div>
+          <div class="industry-title">Women's Fashion</div>
+        </div>
+
+        <!-- 2. Men's Fashion -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-user-tie"></i></div>
+          <div class="industry-title">Men's Fashion</div>
+        </div>
+
+        <!-- 3. Kids Wear -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-child"></i></div>
+          <div class="industry-title">Kids Wear</div>
+        </div>
+
+        <!-- 4. Ethnic Wear -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-gem"></i></div>
+          <div class="industry-title">Ethnic Wear</div>
+        </div>
+
+        <!-- 5. Casual Wear -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-shirt"></i></div>
+          <div class="industry-title">Casual Wear</div>
+        </div>
+
+        <!-- 6. Designer Collections -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+          <div class="industry-title">Designer Collections</div>
+        </div>
+
+        <!-- 7. Sportswear -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-person-running"></i></div>
+          <div class="industry-title">Sportswear</div>
+        </div>
+
+        <!-- 8. Corporate Apparel -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-briefcase"></i></div>
+          <div class="industry-title">Corporate Apparel</div>
+        </div>
+
+        <!-- 9. Hospitality Uniforms -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-hotel"></i></div>
+          <div class="industry-title">Hospitality Uniforms</div>
+        </div>
+
+        <!-- 10. Lifestyle Products -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-bag-shopping"></i></div>
+          <div class="industry-title">Lifestyle Products</div>
+        </div>
+
+        <!-- 11. Home Textiles -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-couch"></i></div>
+          <div class="industry-title">Home Textiles</div>
+        </div>
+
+        <!-- 12. Private Labels -->
+        <div class="industry-card sf-card">
+          <div class="industry-icon-box"><i class="fa-solid fa-tags"></i></div>
+          <div class="industry-title">Private Labels</div>
+        </div>
+
+      </div>
+
+      <div style="margin-top: 5rem; padding: 3.5rem; background-color: var(--bg-surface); border: 1px solid var(--gold-imperial); text-align: center;">
+        <h2 style="margin-bottom: 1rem;">Need Custom Design Sampling or Fabric Testing?</h2>
+        <p style="max-width: 680px; margin: 0 auto 2rem auto; font-size: 1.05rem;">We develop custom print samples in 24-48 hours with full lab color matching and physical fabric swatch kits.</p>
+        <a href="enquiry.html#quote" class="btn-gold"><i class="fa-solid fa-box-open"></i> Order Physical Swatch Sample Kit</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/horizontal_logo.png" alt="Sai Fabrics Group Logo" style="height: 44px; margin-bottom: 1rem;">
+          <p>Sai Fabrics Group (SAI DIGITEX) is a Surat-based digital textile printing leader with over a decade of printing mastery. Engineering fabrics that build fashion brands.</p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="infrastructure.html">Infrastructure</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="enquiry.html">Enquiries & Quotes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Specialties</h4>
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Ethnic Wear Print</a></li>
+            <li><a href="portfolio.html">Reactive Digital Print</a></li>
+            <li><a href="portfolio.html">Gold Foil & Glitter</a></li>
+            <li><a href="portfolio.html">Viscose & Rayon</a></li>
+            <li><a href="portfolio.html">Pleated Fabric</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Manufacturing Hub</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--gold-imperial);"></i> 52,53 Orange Embroidery Park, Opp. Bharat Petrol Pump, Vareli 394327, Surat, Gujarat
+          </p>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            <i class="fa-solid fa-envelope" style="color: var(--gold-imperial);"></i> digitexsai@gmail.com
+          </p>
+
+          <div class="footer-social-wrap">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/919879512345" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sai Fabrics Group (SAI DIGITEX). All Rights Reserved.</div>
+        <div>Reliance & European Export Certified • Surat, Gujarat, India</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

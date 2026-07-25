@@ -3,239 +3,390 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Textile Printing Company in Surat | Sai Fabrics Group</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="src/styles/main.css">
-  <link rel="stylesheet" href="src/styles/components.css">
-  <link rel="stylesheet" href="src/styles/pages/home.css">
-  <script type="module" src="src/main.js"></script>
+  <title>Sai Fabrics Group | Digital Textile Printing Masterhouse Surat</title>
+  <meta name="description" content="Sai Fabrics Group - Premium digital textile printing in Surat, India. 50,000 meters/day capacity across 14 machines. Reliance and European Export compliant.">
+  
+  <!-- FontAwesome Icons & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
-  <!-- Header / Navigation -->
-  <header class="sf-header" id="sf-header">
-    <div class="sf-container">
-      <nav class="sf-navbar">
-        <a href="index.html" class="sf-logo">
-          <i class="bi bi-printer"></i>
-          SAI FABRICS
-        </a>
-        <ul class="sf-nav-menu" id="sf-nav-menu">
-          <li><a href="index.html" class="sf-nav-link active">Home</a></li>
-          <li><a href="about.html" class="sf-nav-link">About Us</a></li>
-          <li><a href="solutions.html" class="sf-nav-link">Solutions</a></li>
-          <li><a href="infrastructure.html" class="sf-nav-link">Infrastructure</a></li>
-          <li><a href="industries.html" class="sf-nav-link">Industries</a></li>
-          <li><a href="blog.html" class="sf-nav-link">Blog</a></li>
-          <li><a href="contact.html" class="sf-nav-link">Contact</a></li>
+
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-wrap">
+        <img src="assets/img/horizontal_logo.png" alt="Sai Fabrics Group Logo" class="brand-logo-img">
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="infrastructure.html" class="nav-link">Infrastructure</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="enquiry.html" class="nav-link">Enquiries & Quotes</a></li>
         </ul>
-        <button class="sf-nav-toggle" id="sf-nav-toggle" aria-label="Toggle menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
       </nav>
+
+      <button class="mobile-toggle" id="mobileToggle"><i class="fa-solid fa-bars"></i></button>
     </div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="sf-hero">
-      <div class="sf-container">
-        <div class="sf-hero-content">
-          <h1>Engineering Fabrics That Build Fashion Brands.</h1>
-          <p class="sf-hero-subtitle">Precision Digital Textile Printing Solutions for Apparel Manufacturers, Fashion Brands & Export Houses.</p>
-          <p class="sf-hero-body">
-            At Sai Fabrics Group, we transform ideas into exceptional printed fabrics through advanced digital textile printing technology, precision manufacturing, and over a decade of industry expertise. From innovative fashion collections to large-scale garment production, we deliver vibrant colours, unmatched consistency, and dependable quality that help brands create products customers love.
-          </p>
-          <div class="sf-hero-ctas">
-            <a href="contact.html" class="sf-btn sf-btn-primary">Request a Quote <i class="bi bi-arrow-right"></i></a>
-            <a href="solutions.html" class="sf-btn sf-btn-secondary">Explore Our Capabilities</a>
-          </div>
+  <!-- MAIN HERO SECTION (Visual Expressive Focus) -->
+  <section class="hero-section">
+    <canvas id="heroCanvas" class="hero-bg-canvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="badge-gold"><i class="fa-solid fa-award"></i> Surat's Premier Textile Printing House</span>
+        <h1>Precision Digital Textile Printing <span class="gold">Engineered for Luxury & Scale.</span></h1>
+        <p class="hero-lead">Transforming complex textile concepts into production-ready fabrics. Over 50,000 meters per day capacity, 14 advanced printing lines, and strict European export compliance.</p>
+        
+        <div class="hero-actions">
+          <a href="portfolio.html" class="btn-gold"><i class="fa-solid fa-layer-group"></i> Explore Portfolio</a>
+          <a href="enquiry.html" class="btn-outline"><i class="fa-solid fa-envelope"></i> B2B Enquiry Desk</a>
         </div>
       </div>
-    </section>
 
-    <!-- Trusted Manufacturing Excellence -->
-    <section class="sf-excellence">
-      <div class="sf-container">
-        <h2 class="sf-excellence-title">Trusted Manufacturing Excellence</h2>
-        <div class="sf-excellence-grid">
-          <div class="sf-excellence-text">
-            <p>
-              In the world of fashion, every detail matters—and every metre of fabric represents your brand. Sai Fabrics Group is more than a textile printing company. We are a trusted manufacturing partner dedicated to helping fashion brands, garment manufacturers, exporters, and textile businesses bring their creative vision to life with confidence.
-            </p>
-            <p>
-              Based in Surat, the textile hub of India, we combine advanced digital printing technology with skilled craftsmanship and stringent quality standards to produce fabrics that consistently exceed expectations. Whether you require sample development, customized prints, or high-volume production, our team ensures every project is executed with precision, reliability, and attention to detail.
-            </p>
-            <p>
-              Our commitment is simple: deliver outstanding quality, maintain consistent production standards, and build long-term partnerships based on trust.
-            </p>
+      <div class="hero-visual-frame">
+        <div class="visual-card-main sf-card">
+          <img src="assets/img/textile_printing_hero.jpg" alt="High speed digital textile printing machine">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLEEK EDITORIAL METRICS RIBBON -->
+  <section class="metrics-strip">
+    <div class="container metrics-grid">
+      <div class="metric-item">
+        <div class="metric-icon-wrap"><i class="fa-solid fa-bolt"></i></div>
+        <div class="metric-text-wrap">
+          <div class="metric-num counter-val" data-target="50000" data-suffix="m+">0</div>
+          <div class="metric-title">Daily Meters Yield</div>
+          <div class="metric-sub">50k m/day active production</div>
+        </div>
+      </div>
+
+      <div class="metric-item">
+        <div class="metric-icon-wrap"><i class="fa-solid fa-print"></i></div>
+        <div class="metric-text-wrap">
+          <div class="metric-num counter-val" data-target="14" data-suffix=" Lines">0</div>
+          <div class="metric-title">Digital Print Engines</div>
+          <div class="metric-sub">High-speed reactive & pigment</div>
+        </div>
+      </div>
+
+      <div class="metric-item">
+        <div class="metric-icon-wrap"><i class="fa-solid fa-users"></i></div>
+        <div class="metric-text-wrap">
+          <div class="metric-num counter-val" data-target="80" data-suffix="+ Team">0</div>
+          <div class="metric-title">Master Craftsmen</div>
+          <div class="metric-sub">Grown from 7 to 80+ members</div>
+        </div>
+      </div>
+
+      <div class="metric-item">
+        <div class="metric-icon-wrap"><i class="fa-solid fa-award"></i></div>
+        <div class="metric-text-wrap">
+          <div class="metric-num counter-val" data-target="18" data-suffix=" Yrs">0</div>
+          <div class="metric-title">Founders' Expertise</div>
+          <div class="metric-sub">Dharmendra & Ravindra Singh</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURVED MANUFACTURING PROCESS TIMELINE GRAPHIC -->
+  <section class="curved-timeline-section">
+    <div class="container">
+      
+      <div class="section-header" style="text-align: center; justify-content: center; margin-bottom: 5rem;">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <span class="heading-tag">// END-TO-END WORKFLOW</span>
+          <h2 style="margin-bottom: 1.25rem;">Our Manufacturing Process</h2>
+          <p style="font-size: 1.1rem; max-width: 720px; margin: 0 auto;">Our disciplined 9-step curved production pipeline weaves together consultation, artwork technical evaluation, lab color calibration, and zero-defect dispatch.</p>
+        </div>
+      </div>
+
+      <div class="timeline-wrapper">
+        
+        <!-- Central Glowing SVG S-Curve Path Line -->
+        <svg class="timeline-svg-bg" viewBox="0 0 1000 1600" preserveAspectRatio="none">
+          <path class="timeline-path-line" d="
+            M 500,20 
+            C 850,150 850,300 500,400 
+            C 150,500 150,650 500,750 
+            C 850,850 850,1000 500,1100 
+            C 150,1200 150,1350 500,1450 
+            C 850,1520 700,1580 500,1600
+          " />
+        </svg>
+
+        <div class="timeline-steps-container">
+
+          <!-- Step 01 (Left) -->
+          <div class="timeline-step-row left">
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-comments"></i></div>
+                  <h3 class="timeline-card-title">Consultation</h3>
+                </div>
+                <p class="timeline-card-desc">Understanding your requirements, applications, and production objectives.</p>
+              </div>
+            </div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">01</div>
+            </div>
+            <div class="timeline-empty-col"></div>
           </div>
-          <div>
-            <div class="sf-woven-graphic" aria-hidden="true">
-              <div class="sf-woven-graphic-inner"></div>
+
+          <!-- Step 02 (Right) -->
+          <div class="timeline-step-row right">
+            <div class="timeline-empty-col"></div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">02</div>
+            </div>
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+                  <h3 class="timeline-card-title">Artwork Evaluation</h3>
+                </div>
+                <p class="timeline-card-desc">Technical assessment of designs for optimal printing results.</p>
+              </div>
             </div>
           </div>
+
+          <!-- Step 03 (Left) -->
+          <div class="timeline-step-row left">
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-scroll"></i></div>
+                  <h3 class="timeline-card-title">Fabric Selection</h3>
+                </div>
+                <p class="timeline-card-desc">Selecting the most suitable fabric for your product requirements.</p>
+              </div>
+            </div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">03</div>
+            </div>
+            <div class="timeline-empty-col"></div>
+          </div>
+
+          <!-- Step 04 (Right) -->
+          <div class="timeline-step-row right">
+            <div class="timeline-empty-col"></div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">04</div>
+            </div>
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-palette"></i></div>
+                  <h3 class="timeline-card-title">Colour Calibration</h3>
+                </div>
+                <p class="timeline-card-desc">Precise colour matching and testing to achieve desired output.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 05 (Left) -->
+          <div class="timeline-step-row left">
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-vial-circle-check"></i></div>
+                  <h3 class="timeline-card-title">Sample Development</h3>
+                </div>
+                <p class="timeline-card-desc">Creating production samples for approval.</p>
+              </div>
+            </div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">05</div>
+            </div>
+            <div class="timeline-empty-col"></div>
+          </div>
+
+          <!-- Step 06 (Right) -->
+          <div class="timeline-step-row right">
+            <div class="timeline-empty-col"></div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">06</div>
+            </div>
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-print"></i></div>
+                  <h3 class="timeline-card-title">Production</h3>
+                </div>
+                <p class="timeline-card-desc">High-quality digital printing using advanced machinery.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 07 (Left) -->
+          <div class="timeline-step-row left">
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-magnifying-glass-check"></i></div>
+                  <h3 class="timeline-card-title">Quality Inspection</h3>
+                </div>
+                <p class="timeline-card-desc">Comprehensive quality checks throughout production.</p>
+              </div>
+            </div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">07</div>
+            </div>
+            <div class="timeline-empty-col"></div>
+          </div>
+
+          <!-- Step 08 (Right) -->
+          <div class="timeline-step-row right">
+            <div class="timeline-empty-col"></div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin">08</div>
+            </div>
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon"><i class="fa-solid fa-box-archive"></i></div>
+                  <h3 class="timeline-card-title">Packaging</h3>
+                </div>
+                <p class="timeline-card-desc">Professional packing to ensure safe transportation.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 09 (Left) -->
+          <div class="timeline-step-row left">
+            <div class="timeline-card-col">
+              <div class="timeline-card sf-card" style="border-color: var(--gold-imperial); background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(212, 163, 79, 0.1) 100%);">
+                <div class="timeline-card-header">
+                  <div class="timeline-card-icon" style="background: var(--gold-imperial); color: var(--bg-midnight);"><i class="fa-solid fa-truck-fast"></i></div>
+                  <h3 class="timeline-card-title" style="color: var(--gold-warm);">Dispatch</h3>
+                </div>
+                <p class="timeline-card-desc">Reliable delivery with complete production support.</p>
+              </div>
+            </div>
+            <div class="timeline-node-col">
+              <div class="timeline-node-pin" style="background: var(--gold-imperial); color: var(--bg-midnight); border-color: var(--gold-warm);">09</div>
+            </div>
+            <div class="timeline-empty-col"></div>
+          </div>
+
         </div>
       </div>
-    </section>
 
-    <!-- Why Leading Brands Choose Us -->
-    <section class="sf-why-choose">
-      <div class="sf-container">
-        <div class="sf-section-header">
-          <h2>Why Leading Brands Choose Sai Fabrics Group</h2>
-          <p>Commitment to quality, scalability, and technical precision</p>
-        </div>
-        <div class="sf-grid">
-          <!-- Card 1 -->
-          <div class="sf-card sf-why-card">
-            <i class="bi bi-clock-history"></i>
-            <h3>Over a Decade of Textile Printing Expertise</h3>
-            <p>With years of specialized experience in digital textile printing, we understand the technical and commercial requirements of the apparel industry.</p>
-          </div>
-          <!-- Card 2 -->
-          <div class="sf-card sf-why-card">
-            <i class="bi bi-bullseye"></i>
-            <h3>Superior Print Precision</h3>
-            <p>High-definition printing technology delivers vibrant colours, intricate detailing, and exceptional print clarity across every fabric.</p>
-          </div>
-          <!-- Card 3 -->
-          <div class="sf-card sf-why-card">
-            <i class="bi bi-palette"></i>
-            <h3>Reliable Colour Consistency</h3>
-            <p>Our controlled production process ensures uniform shades and repeat accuracy, helping maintain consistency across production batches.</p>
-          </div>
-          <!-- Card 4 -->
-          <div class="sf-card sf-why-card">
-            <i class="bi bi-gear-wide-connected"></i>
-            <h3>Customized Manufacturing Solutions</h3>
-            <p>Every brand has unique requirements. We offer tailored printing solutions designed to match your fabric, design, and production objectives.</p>
-          </div>
-          <!-- Card 5 -->
-          <div class="sf-card sf-why-card">
-            <i class="bi bi-arrow-up-right-circle"></i>
-            <h3>Scalable Production Capacity</h3>
-            <p>From prototype sampling to large-scale manufacturing, our infrastructure is equipped to support businesses of every size.</p>
-          </div>
-          <!-- Card 6 -->
-          <div class="sf-card sf-why-card">
-            <i class="bi bi-cursor-fill"></i>
-            <h3>Timely Delivery</h3>
-            <p>Efficient planning, streamlined production, and dependable logistics ensure your orders are delivered as promised.</p>
-          </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIAL CAPABILITIES HIGHLIGHT -->
+  <section class="section-padding capabilities-visual-section">
+    <div class="container">
+      <div class="section-header" style="margin-bottom: 4rem;">
+        <div class="section-title-wrap">
+          <span class="heading-tag">// INFRASTRUCTURE & STANDARDS</span>
+          <h2>Why Global Apparel Brands Partner With Us</h2>
         </div>
       </div>
-    </section>
 
-    <!-- Numbers That Reflect Our Commitment -->
-    <section class="sf-stats">
-      <div class="sf-container">
-        <div class="sf-section-header">
-          <h2>Numbers That Reflect Our Commitment</h2>
-          <p style="color: rgba(251, 249, 246, 0.75);">Quantifiable reliability in digital print manufacturing</p>
+      <div class="grid-3">
+        <div class="cap-item-card sf-card">
+          <div class="cap-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h3>14 High-Speed Digital Lines</h3>
+          <p>Equipped with state-of-the-art Japanese & Italian digital print engines capable of high DPI resolution and flawless color registration.</p>
         </div>
-        <div class="sf-stats-grid">
-          <!-- Stat 1 -->
-          <div class="sf-stat-card">
-            <div class="sf-stat-number" id="stat-years">10+</div>
-            <div class="sf-stat-label">Years</div>
-            <p class="sf-stat-desc">Industry Experience</p>
-          </div>
-          <!-- Stat 2 -->
-          <div class="sf-stat-card">
-            <div class="sf-stat-number" id="stat-designs">1000s</div>
-            <div class="sf-stat-label">Designs</div>
-            <p class="sf-stat-desc">Successfully Printed</p>
-          </div>
-          <!-- Stat 3 -->
-          <div class="sf-stat-card">
-            <div class="sf-stat-number" id="stat-fabrics">12+</div>
-            <div class="sf-stat-label">Fabric Categories</div>
-            <p class="sf-stat-desc">Supported</p>
-          </div>
-          <!-- Stat 4 -->
-          <div class="sf-stat-card">
-            <div class="sf-stat-number" id="stat-quality">100%</div>
-            <div class="sf-stat-label">Quality Inspection</div>
-            <p class="sf-stat-desc">Before Dispatch</p>
-          </div>
+
+        <div class="cap-item-card sf-card">
+          <div class="cap-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>Reliance & EU Export Compliance</h3>
+          <p>Strictly adhering to Reliance compliance norms and European export standards for chemical safety, color fastness, and zero AZO dyes.</p>
+        </div>
+
+        <div class="cap-item-card sf-card">
+          <div class="cap-icon"><i class="fa-solid fa-bolt"></i></div>
+          <h3>50,000 Metre Daily Output</h3>
+          <p>Industrial scale production engineered for fast fashion turnarounds. From 50m sample development to 100,000m bulk orders.</p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Let's Create Your Next Bestselling Collection -->
-    <section class="sf-cta-banner">
-      <div class="sf-container">
-        <div class="sf-cta-banner-content">
-          <h2>Let's Create Your Next Bestselling Collection</h2>
-          <p>Whether you are launching a new fashion line, scaling production, or looking for a reliable digital textile printing partner, Sai Fabrics Group is ready to help you turn your ideas into exceptional fabrics.</p>
-          <a href="contact.html" class="sf-btn sf-btn-primary">Request a Quote Today <i class="bi bi-arrow-right"></i></a>
-        </div>
+  <!-- QUICK ENQUIRY CALLOUT -->
+  <section class="section-padding" style="background: radial-gradient(circle, rgba(212, 163, 79, 0.1) 0%, rgba(24, 17, 29, 1) 80%); text-align: center;">
+    <div class="container" style="max-width: 800px;">
+      <span class="badge-gold" style="margin-bottom: 1rem;"><i class="fa-solid fa-handshake"></i> Direct B2B Collaboration</span>
+      <h2>Have a Textile Printing Inquiry or Custom Artwork Ready?</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem;">Connect directly with our founders Dharmendra Singh & Ravindra Singh or request a custom quote & sample swatch kit.</p>
+      
+      <div style="display: flex; justify-content: center;">
+        <a href="enquiry.html" class="btn-gold"><i class="fa-solid fa-paper-plane"></i> Submit B2B Enquiry</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <!-- Footer -->
-  <footer class="sf-footer">
-    <div class="sf-container">
-      <div class="sf-footer-grid">
-        <div class="sf-footer-brand">
-          <a href="index.html" class="sf-logo">
-            <i class="bi bi-printer"></i>
-            SAI FABRICS
-          </a>
-          <p>Engineering Fabrics That Build Fashion Brands. Premium Digital Printing Solutions based in Surat.</p>
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/img/horizontal_logo.png" alt="Sai Fabrics Group Logo" style="height: 44px; margin-bottom: 1rem;">
+          <p>Sai Fabrics Group (SAI DIGITEX) is a Surat-based digital textile printing leader with over a decade of printing mastery. Engineering fabrics that build fashion brands.</p>
         </div>
+
         <div>
-          <h5 class="sf-footer-title">Quick Links</h5>
-          <ul class="sf-footer-links">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="infrastructure.html">Infrastructure</a></li>
-            <li><a href="industries.html">Industries</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="enquiry.html">Enquiries & Quotes</a></li>
           </ul>
         </div>
+
         <div>
-          <h5 class="sf-footer-title">Our Solutions</h5>
-          <ul class="sf-footer-links">
-            <li><a href="solutions.html">Digital Textile Printing</a></li>
-            <li><a href="solutions.html">Custom Fabric Printing</a></li>
-            <li><a href="solutions.html">Sampling</a></li>
-            <li><a href="solutions.html">Bulk Manufacturing</a></li>
-            <li><a href="solutions.html">Colour Management</a></li>
-            <li><a href="solutions.html">Quality Assurance</a></li>
+          <h4 class="footer-title">Specialties</h4>
+          <ul class="footer-links">
+            <li><a href="portfolio.html">Ethnic Wear Print</a></li>
+            <li><a href="portfolio.html">Reactive Digital Print</a></li>
+            <li><a href="portfolio.html">Gold Foil & Glitter</a></li>
+            <li><a href="portfolio.html">Viscose & Rayon</a></li>
+            <li><a href="portfolio.html">Pleated Fabric</a></li>
           </ul>
         </div>
+
         <div>
-          <h5 class="sf-footer-title">Contact Us</h5>
-          <ul class="sf-footer-contact">
-            <li><i class="bi bi-geo-alt"></i> <span>Plot No. 142, Surat Textile Industrial Estate, Ring Road, Surat, Gujarat, 395002, India</span></li>
-            <li><i class="bi bi-telephone"></i> <span>+91 261 400 9000</span></li>
-            <li><i class="bi bi-envelope"></i> <span>contact@saifabrics.com</span></li>
-            <li><i class="bi bi-clock"></i> <span>Mon - Sat: 9:30 AM - 7:00 PM</span></li>
-          </ul>
-          <div class="sf-footer-socials">
-            <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          <h4 class="footer-title">Manufacturing Hub</h4>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-location-dot" style="color: var(--gold-imperial);"></i> 52,53 Orange Embroidery Park, Opp. Bharat Petrol Pump, Vareli 394327, Surat, Gujarat
+          </p>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            <i class="fa-solid fa-envelope" style="color: var(--gold-imperial);"></i> digitexsai@gmail.com
+          </p>
+
+          <div class="footer-social-wrap">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="footer-social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="footer-social-link"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="footer-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/919879512345" target="_blank" aria-label="WhatsApp" class="footer-social-link"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
       </div>
-      <div class="sf-footer-bottom">
-        <p>&copy; 2026 Sai Fabrics Group. All Rights Reserved.</p>
-        <p>Precision Digital Textile Printing Solutions</p>
+
+      <div class="footer-bottom">
+        <div>© 2026 Sai Fabrics Group (SAI DIGITEX). All Rights Reserved.</div>
+        <div>Reliance & European Export Certified • Surat, Gujarat, India</div>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="src/modules/charts.js"></script>
-  <script type="module" src="src/modules/animations.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
