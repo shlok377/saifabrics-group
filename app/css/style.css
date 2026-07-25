@@ -1594,3 +1594,114 @@ textarea.form-control {
     gap: 0.8rem !important;
   }
 }
+
+/* ================================================================================
+   LAUNCH SPLASH SCREEN STYLES (HOME PAGE ONLY)
+   ================================================================================ */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-midnight);
+  background-image: 
+    radial-gradient(circle at 50% 45%, rgba(212, 163, 79, 0.15) 0%, transparent 60%),
+    radial-gradient(circle at 20% 20%, rgba(46, 34, 53, 0.5) 0%, transparent 50%);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  pointer-events: all;
+}
+
+.splash-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.splash-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  transform: scale(0.96);
+  animation: splashZoomIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.splash-logo-wrap {
+  position: relative;
+  padding: 0.5rem;
+}
+
+.splash-logo-img {
+  max-width: 270px;
+  height: auto;
+  border-radius: 16px;
+  border: 1px solid var(--gold-imperial);
+  box-shadow: 0 0 35px rgba(212, 163, 79, 0.45);
+  animation: splashLogoPulse 1s ease-in-out infinite alternate;
+}
+
+.splash-loader-bar {
+  width: 220px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.splash-loader-progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold-imperial), var(--gold-warm));
+  box-shadow: 0 0 10px var(--gold-imperial);
+  animation: splashProgress 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.splash-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold-warm);
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+@keyframes splashZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes splashLogoPulse {
+  from {
+    filter: drop-shadow(0 0 18px rgba(212, 163, 79, 0.3));
+  }
+  to {
+    filter: drop-shadow(0 0 38px rgba(212, 163, 79, 0.65));
+  }
+}
+
+@keyframes splashProgress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+

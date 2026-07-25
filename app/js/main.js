@@ -3,6 +3,7 @@
    ================================================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initSplashScreen();
   initNavigation();
   initCanvasFabricEffect();
   initMetricCounters();
@@ -12,6 +13,26 @@ document.addEventListener('DOMContentLoaded', () => {
   initQuoteCalculator();
   initFabricSwatchModal();
 });
+
+/* 0. LAUNCH SPLASH SCREEN (HOME PAGE ONLY) */
+function initSplashScreen() {
+  const splash = document.getElementById('splashScreen');
+  if (!splash) return;
+
+  // Lock body scrolling during launch splash
+  document.body.style.overflow = 'hidden';
+
+  // Display for 1.5 seconds (1500ms) before initiating fade out
+  setTimeout(() => {
+    splash.classList.add('fade-out');
+    document.body.style.overflow = '';
+    
+    // Clean up from DOM after fade-out transition completes
+    setTimeout(() => {
+      splash.remove();
+    }, 500);
+  }, 1500);
+}
 
 /* 1. NAVIGATION & MOBILE MENU */
 function initNavigation() {
