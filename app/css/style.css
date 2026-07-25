@@ -131,6 +131,11 @@ a:hover {
   padding: 8rem 0;
 }
 
+.page-hero {
+  padding-top: 145px !important;
+  padding-bottom: 5rem !important;
+}
+
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3.5rem; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.8rem; }
 .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
@@ -1460,6 +1465,10 @@ textarea.form-control {
   }
   .section-padding {
     padding: 3.8rem 0 !important;
+  }
+  .page-hero {
+    padding-top: 115px !important;
+    padding-bottom: 3.5rem !important;
   }
   h1 {
     font-size: clamp(1.85rem, 8.5vw, 2.5rem) !important;
