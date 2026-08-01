@@ -22,9 +22,12 @@ app/dist/
 .DS_Store
 Thumbs.db
 
-# Sensitive config
-email.json
-app/email.json
+# Sensitive & Temp Files
+Firebase_temp.txt
+start-monitoring*
+.vscode/
+*.pdf
+info*.txt
 
 # Internal logs/state
 .think-live/
