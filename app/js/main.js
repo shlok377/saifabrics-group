@@ -197,62 +197,62 @@ function initGalleryFilters() {
 const fabricDatabase = {
   polyester: {
     title: 'Polyester Fabric',
-    desc: 'Highly durable synthetic fiber with excellent color vibrancy. Ideal for activewear, sportswear, and vibrant sub-limation print outputs.',
+    desc: 'Durable synthetic fabric offering bright color output. Ideal for sportswear, active apparel, and sublimation digital printing.',
     img: 'assets/img/textile_printing_hero.jpg'
   },
   cotton: {
     title: 'Cotton Fabric (60x60 Combed)',
-    desc: 'Natural, breathable 100% combed cotton with superior ink absorption and zero AZO dyes. Perfect for daily fashion and kids collections.',
+    desc: 'Soft, breathable 100% combed cotton with great ink absorption and AZO-free dyes. Great for everyday apparel and kidswear.',
     img: 'assets/img/ethnic_silk_swatch.jpg'
   },
   rayon: {
     title: 'Rayon Staple Fabric',
-    desc: 'Soft, silky cellulose fabric with fluid drape and high color fastness. Ideal for lightweight women\'s tops, dresses, and ethnic wear.',
+    desc: 'Smooth cellulose fabric offering fluid drape and high color fastness. Ideal for women\'s tops, dresses, and ethnic apparel.',
     img: 'assets/img/factory_machinery.jpg'
   },
   viscose: {
     title: 'Viscose Fabric',
-    desc: 'Semi-synthetic fabric offering a luxurious hand-feel and high-definition detail printing. Fully Reliance & EU export certified.',
+    desc: 'Smooth fabric with a premium hand-feel and high-definition print detail. Reliance and European export compliant.',
     img: 'assets/img/factory_machinery.jpg'
   },
   linen: {
     title: 'Linen Fabric',
-    desc: 'Classic organic textured flax weave. Provides a unique tactile background that enhances botanical and geometric print designs.',
+    desc: 'Natural textured flax fabric. Offers a unique surface feel that pairs well with botanical and geometric prints.',
     img: 'assets/img/ethnic_silk_swatch.jpg'
   },
   silk: {
     title: 'Silk Blends',
-    desc: 'Luxurious natural silk blend with rich gold foil accents and reactive digital print reproduction for premium fashion labels.',
+    desc: 'Natural silk blend fabric designed for gold foil accents and reactive digital printing for luxury fashion brands.',
     img: 'assets/img/ethnic_silk_swatch.jpg'
   },
   satin: {
     title: 'Satin Fabric',
-    desc: 'Glossy surface weave delivering striking depth, high-contrast color saturation, and elegant drape for festive eveningwear.',
+    desc: 'Smooth glossy fabric offering rich color depth, clean contrast, and fluid drape for evening and festive wear.',
     img: 'assets/img/foil_glitter_fabric.jpg'
   },
   crepe: {
     title: 'Crepe Fabric',
-    desc: 'Wrinkle-resistant crinkly surface weave holding intricate detail prints and rich dye penetration for ladies garments.',
+    desc: 'Wrinkle-resistant crinkled fabric that holds sharp print details and deep color penetration for women\'s wear.',
     img: 'assets/img/digital_chiffon_swatch.jpg'
   },
   chiffon: {
     title: 'Chiffon Fabric',
-    desc: 'Ultra-sheer floaty mesh weave. Perfect for dupattas, scarves, overlays, and flowing multi-layered fashion garments.',
+    desc: 'Lightweight sheer fabric. Ideal for dupattas, scarves, overlays, and flowing multi-layered fashion garments.',
     img: 'assets/img/digital_chiffon_swatch.jpg'
   },
   georgette: {
     title: 'Georgette Fabric',
-    desc: 'Crinkly semi-sheer fabric engineered for printed sarees, ethnic festive gowns, and precision pleated fashion lines.',
+    desc: 'Semi-sheer crinkled fabric made for printed sarees, ethnic festive gowns, and pleated fashion lines.',
     img: 'assets/img/foil_glitter_fabric.jpg'
   },
   knitted: {
     title: 'Knitted Fabrics',
-    desc: 'Flexible elastomeric stretch knits supporting 3D raised rubber, elastomeric khari, and high-density digital print outputs.',
+    desc: 'Flexible stretch knits suited for 3D raised rubber, khari prints, and high-density digital fabric printing.',
     img: 'assets/img/textile_printing_hero.jpg'
   },
   woven: {
     title: 'Woven Fabrics',
-    desc: 'Structured high-density woven weave engineered for commercial apparel, uniform textiles, and home furnishing applications.',
+    desc: 'Durable woven fabric suited for commercial garments, uniform textiles, and home furnishing applications.',
     img: 'assets/img/factory_machinery.jpg'
   }
 };
